@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+
+# Editor / tool state
+.idea/
+.vscode/
+
+# Training artifacts: keep only the best checkpoint, ignore everything else.
+*.pt
+!best_model_batch5_20260507_125548.pt
