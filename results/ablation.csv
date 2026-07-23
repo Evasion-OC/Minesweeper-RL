@@ -1,0 +1,7 @@
+board,model,avg_reward,win_rate
+8x8x10,plain,10.038,0.15
+8x8x10,plain+tta,10.686,0.154
+8x8x10,equivariant,18.014,0.34
+16x16x40,plain,15.56,0.0
+16x16x40,plain+tta,16.819,0.0
+16x16x40,equivariant,21.452,0.006
