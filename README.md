@@ -28,8 +28,8 @@ No layer has a size-dependent weight shape, so **one set of weights runs on
 any board size**. The equivariant variant (`minesweeper/equivariant.py`)
 replaces the convolutions with D4 group convolutions (lifting + group conv,
 group pooling before the heads), making the Q-map equivariant to rotations
-and reflections of the board *by construction* — verified numerically in
-`tests/test_equivariance.py` on all 8 group elements.
+and reflections of the board *by construction*. Numerical tests in
+`tests/test_equivariance.py` verify this on all 8 group elements.
 
 ## Results
 
@@ -66,7 +66,7 @@ per cell; `scripts/run_ablation.py`):
 
 The two symmetry mechanisms do different jobs. Orbit-averaging at inference
 (TTA) is worth +20 points of win rate on a well-trained model (the shipped
-checkpoint above) but almost nothing on an undertrained one — symmetrising a
+checkpoint above) but almost nothing on an undertrained one. Symmetrising a
 weak Q function just averages its noise. Building the symmetry into the
 architecture pays during **training**: at the same budget the equivariant
 network more than doubles the plain network's win rate, and it also beats a
@@ -88,19 +88,19 @@ zoo; 4 pairs, each pairing the seed-1 agent with a different partner;
 <p align="center"><img src="results/wsl_barriers.png" width="700"></p>
 
 Naive interpolation collapses at the midpoint (anchor agent 12.5% win,
-partners 7.5–12%, naive midpoint mean 0.9%). Permutation alignment roughly
+partners 7.5% to 12%, naive midpoint mean 0.9%). Permutation alignment roughly
 quadruples the midpoint mean (3.9%) and lies above the naive curve at every
-interior lambda in the 4-pair average (individual pairs vary) — but it does
+interior lambda in the 4-pair average (individual pairs vary). It does
 **not** close the barrier: these independently trained agents are not
 linearly mode-connected even after alignment, consistent with what is
 reported for small networks trained from scratch.
 
 <p align="center"><img src="results/wsl_spectra.png" width="900"></p>
 
-The per-layer singular value spectra are strikingly consistent across
-seeds, and two layers (conv3, value_fc1) carry a **near-flat
-bulk** — long runs of nearly equal singular values — which is exactly the
-regime where truncation-based spectral methods are perturbation-sensitive
+The per-layer singular value spectra are consistent across seeds.
+Two layers (conv3, value_fc1) carry a **near-flat bulk**: long runs of
+nearly equal singular values. This is the regime where
+truncation-based spectral methods are perturbation-sensitive
 (the subspace attached to a cluster of near-equal singular values is only
 determined up to rotation within the cluster).
 
