@@ -7,12 +7,12 @@ reads the board as a two-plane image and outputs one Q value per cell, and a
 deductive constraint solver (SAT/SMT) that uses symmetry reduction over
 the dihedral group D4 via Burnside's lemma. The learned side carries the
 same group structure as the deductive side: D4 test-time augmentation, a
-hand-rolled p4m group-equivariant variant of the network, and a
-weight-space analysis of independently trained agents (permutation
-alignment and interpolation barriers).
+hand-rolled p4m group-equivariant variant of the network, and the stuff in
+`wsl/`, where I look at what independently trained agents have in common
+once you line their neurons up.
 
 Originally my BSc final project at the University of Leeds; the symmetry and
-weight-space extensions came later.
+`wsl/` work came later.
 
 ## The network
 
@@ -52,7 +52,7 @@ of win rate on the training size and takes the 16×16 zero-shot win rate from
 1.3% to 16%, about 12×. On 16×30 neither variant wins games, though TTA
 still raises the average reward from 7.4 to 10.9.
 
-### Ablation: symmetry in the architecture vs at inference
+### Where to put the symmetry
 
 Plain FCN vs the same weights with D4 TTA vs the p4m-equivariant network,
 all trained for the same 3,000-episode budget on 8×8/10 (500 eval episodes
@@ -72,9 +72,9 @@ instead: at the same budget the equivariant network more than doubles the
 plain network's win rate, and it also beats a plain run trained 2.5 times
 longer (20.0% at 7,500 episodes, same eval protocol).
 
-## Weight-space analysis
+## wsl/
 
-`wsl/` treats the trained agents themselves as data. The architecture's
+This part treats the trained agents themselves as data. The architecture's
 neuron-permutation symmetry group is a product of four symmetric groups
 (over the three conv-channel axes and the value-MLP hidden axis);
 `wsl/align.py` implements Git Re-Basin style weight matching over it,
@@ -92,8 +92,8 @@ partners 7.5% to 12%, naive midpoint mean 0.9%). Permutation alignment roughly
 quadruples the midpoint mean (3.9%) and lies above the naive curve at every
 interior lambda in the 4-pair average, though individual pairs vary. It does
 not close the barrier: these independently trained agents are not
-linearly mode-connected even after alignment, consistent with what is
-reported for small networks trained from scratch.
+linearly mode-connected even after alignment, which matches what people
+find for small networks trained from scratch.
 
 <p align="center"><img src="results/wsl_spectra.png" width="900"></p>
 
@@ -106,7 +106,7 @@ determined up to rotation within the cluster.
 
 Reproduce: `scripts/train_zoo.py`, then `scripts/wsl_report.py`.
 
-## Layout
+## What's where
 
 ```
 minesweeper/         headless package: board, env, models, replay, train, eval, d4, equivariant
