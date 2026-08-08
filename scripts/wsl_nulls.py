@@ -31,26 +31,8 @@ import torch  # noqa: E402
 from minesweeper.env import MinesweeperEnv  # noqa: E402
 from minesweeper.models import DQN, pick_device  # noqa: E402
 from minesweeper.eval import evaluate  # noqa: E402
-from wsl.align import (PERM_SIZES, _ROW_PARAMS, _COL_PARAMS, _rows_matrix,  # noqa: E402
-                       _cols_matrix, weight_matching, apply_perms, interpolate)
-
-# Exact assignment ties require a unit's objective contribution (~norm^2) to
-# sit at or below float64 resolution of the total cost (~1e-14 for O(100)
-# objectives), i.e. norm below ~1e-7. Observed tie-class units are <= 4e-9;
-# the next units up the norm distribution are >= ~1e-4 and never tie.
-DEAD_NORM = 1e-7
-
-
-def unit_norms(sd, p):
-    """Per-unit norm over every weight slice carrying permutation axis p."""
-    sq = np.zeros(PERM_SIZES[p])
-    for name, _ in _ROW_PARAMS[p]:
-        m = _rows_matrix(sd, name, None)
-        sq += (m ** 2).sum(axis=1)
-    for name, _ in _COL_PARAMS[p]:
-        m = _cols_matrix(sd, name, None)
-        sq += (m ** 2).sum(axis=1)
-    return np.sqrt(sq)
+from wsl.align import (PERM_SIZES, DEAD_NORM, unit_norms,  # noqa: E402
+                       weight_matching, apply_perms, interpolate)
 
 TRAJ_PAIRS = [
     ("checkpoints/zoo/zoo_seed%d_batch1.pt" % s, "checkpoints/zoo/zoo_seed%d_best.pt" % s)

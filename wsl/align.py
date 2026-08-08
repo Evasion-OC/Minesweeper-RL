@@ -70,6 +70,41 @@ def _cols_matrix(sd, name, other_perm_idx):
     return w.reshape(w.shape[0], -1)
 
 
+# Exact assignment ties require a unit's objective contribution (~norm^2) to
+# sit at or below float64 resolution of the total cost (~1e-14 for O(100)
+# objectives), i.e. norm below ~1e-7. Observed tie-class units are <= 4e-9;
+# the next units up the norm distribution are >= ~1e-4 and never tie.
+DEAD_NORM = 1e-7
+
+
+def unit_norms(sd, p):
+    """Per-unit norm over every weight slice carrying permutation axis p.
+    Units below DEAD_NORM are numerically dead: an exact zero-cost tie class
+    inside which any matching is arbitrary."""
+    sq = np.zeros(PERM_SIZES[p])
+    for name, _ in _ROW_PARAMS[p]:
+        sq += (_rows_matrix(sd, name, None) ** 2).sum(axis=1)
+    for name, _ in _COL_PARAMS[p]:
+        sq += (_cols_matrix(sd, name, None) ** 2).sum(axis=1)
+    return np.sqrt(sq)
+
+
+def axis_cost_matrix(sd_a, sd_b, p, perms):
+    """Similarity matrix for axis p (A units x B units), summed over every
+    weight slice carrying p, with B's other axes aligned by `perms`."""
+    n = PERM_SIZES[p]
+    C = np.zeros((n, n))
+    for name, other in _ROW_PARAMS[p]:
+        A = _rows_matrix(sd_a, name, None)
+        B = _rows_matrix(sd_b, name, perms[other] if other else None)
+        C += A @ B.T
+    for name, other in _COL_PARAMS[p]:
+        A = _cols_matrix(sd_a, name, None)
+        B = _cols_matrix(sd_b, name, perms[other] if other else None)
+        C += A @ B.T
+    return C
+
+
 def weight_matching(sd_a, sd_b, max_iter=100, seed=0):
     """Returns perms dict: perms[p][i] = index into B matched to A's unit i."""
     rng = np.random.default_rng(seed)
@@ -78,16 +113,7 @@ def weight_matching(sd_a, sd_b, max_iter=100, seed=0):
     for _ in range(max_iter):
         changed = False
         for p in rng.permutation(names):
-            n = PERM_SIZES[p]
-            C = np.zeros((n, n))
-            for name, other in _ROW_PARAMS[p]:
-                A = _rows_matrix(sd_a, name, None)
-                B = _rows_matrix(sd_b, name, perms[other] if other else None)
-                C += A @ B.T
-            for name, other in _COL_PARAMS[p]:
-                A = _cols_matrix(sd_a, name, None)
-                B = _cols_matrix(sd_b, name, perms[other] if other else None)
-                C += A @ B.T
+            C = axis_cost_matrix(sd_a, sd_b, p, perms)
             ri, ci = linear_sum_assignment(-C)
             new = ci[np.argsort(ri)]
             if not np.array_equal(new, perms[p]):
