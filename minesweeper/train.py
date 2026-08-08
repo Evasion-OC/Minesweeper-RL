@@ -60,7 +60,8 @@ def train(n_rows=8, n_cols=8, num_mines=10,
           out_dir="checkpoints",
           run_name=None,
           device=None,
-          log_every=100):
+          log_every=100,
+          milestone_fracs=()):
     if num_batches < 1:
         raise ValueError(f"num_batches must be >= 1, got {num_batches}")
     device = pick_device(device)
@@ -85,6 +86,22 @@ def train(n_rows=8, n_cols=8, num_mines=10,
     max_steps = max(2 * n_rows * n_cols, 200)
 
     log_rows = []
+
+    # checkpoints at fixed training fractions (0 = initialisation): pure
+    # saves with no RNG draws, so the training stream is identical with or
+    # without them. Under early stopping, later milestones are never reached.
+    total_episodes = episodes_per_batch * num_batches
+    milestones = {}
+    for frac in sorted(milestone_fracs):
+        milestones.setdefault(int(round(frac * total_episodes)), frac)
+
+    def save_milestone(frac):
+        path = os.path.join(out_dir, f"{run_name}_frac{int(round(frac * 100)):03d}.pt")
+        torch.save(policy_net.state_dict(), path)
+
+    if 0 in milestones:
+        save_milestone(milestones.pop(0))
+
     for batch_idx in range(1, num_batches + 1):
         batch_rewards, batch_wins = [], []
         for episode in range(episodes_per_batch):
@@ -162,6 +179,10 @@ def train(n_rows=8, n_cols=8, num_mines=10,
                       f"avg_r={np.mean(batch_rewards[-log_every:]):.2f} "
                       f"win={np.mean(batch_wins[-log_every:]):.2%} "
                       f"eps={epsilon:.3f} steps={env_steps}", flush=True)
+
+            done_episodes = (batch_idx - 1) * episodes_per_batch + episode + 1
+            if done_episodes in milestones:
+                save_milestone(milestones.pop(done_episodes))
 
         avg_reward, win_rate = evaluate(policy_net, env, eval_episodes, device)
         log_rows.append({"batch": batch_idx, "train_avg_reward": float(np.mean(batch_rewards)),

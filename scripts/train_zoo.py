@@ -26,9 +26,13 @@ def main():
     p.add_argument("--epsilon-decay-steps", type=int, default=15_000)
     p.add_argument("--learning-starts", type=int, default=500)
     p.add_argument("--target-sync-steps", type=int, default=2_000)
+    p.add_argument("--milestones", default="0,0.25,0.5,0.75",
+                   help="training fractions to checkpoint (empty to disable)")
     p.add_argument("--out-dir", default="checkpoints/zoo")
     p.add_argument("--device", default=None)
     args = p.parse_args()
+
+    fracs = tuple(float(v) for v in args.milestones.split(",") if v != "")
 
     for seed in args.seeds:
         train(n_rows=args.rows, n_cols=args.cols, num_mines=args.mines,
@@ -39,7 +43,7 @@ def main():
               learning_starts=args.learning_starts,
               target_sync_steps=args.target_sync_steps,
               out_dir=args.out_dir, run_name=f"zoo_seed{seed}",
-              device=args.device)
+              device=args.device, milestone_fracs=fracs)
 
 
 if __name__ == "__main__":
