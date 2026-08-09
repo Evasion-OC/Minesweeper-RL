@@ -34,12 +34,16 @@ from minesweeper.eval import evaluate  # noqa: E402
 from wsl.align import (PERM_SIZES, DEAD_NORM, unit_norms,  # noqa: E402
                        weight_matching, apply_perms, interpolate)
 
-TRAJ_PAIRS = [
-    ("checkpoints/zoo/zoo_seed%d_batch1.pt" % s, "checkpoints/zoo/zoo_seed%d_best.pt" % s)
-    for s in range(1, 7)
-] + [
-    ("checkpoints/plain_seed0_long_batch1.pt", "checkpoints/plain_seed0_long_best.pt"),
-]
+def traj_pairs():
+    """Every zoo seed's batch1-to-best pair, plus the long plain run."""
+    pairs = []
+    for early in sorted(glob.glob("checkpoints/zoo/*_batch1.pt")):
+        late = early.replace("_batch1.pt", "_best.pt")
+        if Path(late).exists():
+            pairs.append((early, late))
+    pairs.append(("checkpoints/plain_seed0_long_batch1.pt",
+                  "checkpoints/plain_seed0_long_best.pt"))
+    return pairs
 
 # trajectory pairs that also get the (more expensive) interpolation curves
 EVAL_PAIRS = {"zoo_seed1_batch1 vs zoo_seed1_best",
@@ -104,7 +108,7 @@ def main():
 
     # --- same-run trajectory match: expected near-identity, near-equal curves
     env = MinesweeperEnv(n_rows=args.rows, n_cols=args.cols, num_mines=args.mines)
-    for early, late in TRAJ_PAIRS:
+    for early, late in traj_pairs():
         if not (Path(early).exists() and Path(late).exists()):
             print(f"traj  skipping missing pair {early} {late}", flush=True)
             continue
