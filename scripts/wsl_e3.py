@@ -31,9 +31,9 @@ from scipy import stats as sps  # noqa: E402
 from minesweeper.env import MinesweeperEnv  # noqa: E402
 from minesweeper.models import DQN, infer_width, pick_device  # noqa: E402
 from minesweeper.eval import evaluate  # noqa: E402
-from wsl.align import PERM_AXES, weight_matching, apply_perms, interpolate  # noqa: E402
+from wsl.align import PERM_AXES, weight_matching_restarts, apply_perms, interpolate  # noqa: E402
 from wsl.degeneracy import AXIS_LAYER, layer_degeneracy  # noqa: E402
-from wsl.instability import (NOISE_DRAWS, NOISE_EPS, RESTART_SEEDS,  # noqa: E402
+from wsl.instability import (NOISE_DRAWS, NOISE_EPS, PERT_RESTARTS, RESTART_SEEDS,  # noqa: E402
                              assignment_gap, perturbation_sensitivity,
                              restart_disagreement)
 
@@ -45,6 +45,8 @@ def main():
     p.add_argument("--eps", type=float, default=NOISE_EPS)
     p.add_argument("--draws", type=int, default=NOISE_DRAWS)
     p.add_argument("--restart-seeds", type=int, default=RESTART_SEEDS)
+    p.add_argument("--pert-restarts", type=int, default=PERT_RESTARTS,
+                   help="restarts inside the perturbation probe")
     p.add_argument("--restart-episodes", type=int, default=0,
                    help="> 0: also evaluate midpoint win rate per restart")
     p.add_argument("--rows", type=int, default=8)
@@ -79,14 +81,16 @@ def main():
     results = []
     for a, b in pairs:
         sd_a, sd_b = sds[a], sds[b]
-        perms0 = weight_matching(sd_a, sd_b)
+        perms0, _, objs0 = weight_matching_restarts(sd_a, sd_b, n_restarts=args.restart_seeds)
         pert = perturbation_sensitivity(sd_a, sd_b, base_perms=perms0,
-                                        eps=args.eps, draws=args.draws)
+                                        eps=args.eps, draws=args.draws,
+                                        restarts=args.pert_restarts)
         gaps = assignment_gap(sd_a, sd_b, perms=perms0)
         restart, perm_list = restart_disagreement(
             sd_a, sd_b, seeds=tuple(range(args.restart_seeds)), base_perms=perms0)
         entry = {"pair": f"{a} vs {b}", "a": a, "b": b, "perturbation": pert,
-                 "assignment_gap": gaps, "restart": restart}
+                 "assignment_gap": gaps, "restart": restart,
+                 "objectives": {"min": min(objs0), "max": max(objs0), "all": objs0}}
         if args.restart_episodes > 0:
             wins = []
             device = next(model.parameters()).device

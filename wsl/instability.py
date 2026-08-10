@@ -31,11 +31,13 @@ import torch
 from scipy.optimize import linear_sum_assignment
 
 from .align import (PERM_AXES, DEAD_NORM, unit_norms, axis_cost_matrix,
-                    matching_objective, weight_matching)
+                    matching_objective, weight_matching, weight_matching_restarts)
 
 NOISE_EPS = 1e-2
 NOISE_DRAWS = 10
 RESTART_SEEDS = 10
+# restarts inside the perturbation probe (cost vs residual solver noise)
+PERT_RESTARTS = 5
 # relative objective tolerance for calling two restarts tied
 OBJ_RTOL = 1e-6
 
@@ -50,11 +52,18 @@ def _eligible(live_a, live_b, perm):
 
 
 def perturbation_sensitivity(sd_a, sd_b, base_perms=None, eps=NOISE_EPS,
-                             draws=NOISE_DRAWS, rng_seed=0):
+                             draws=NOISE_DRAWS, rng_seed=0,
+                             restarts=PERT_RESTARTS):
     """Fraction of live assignments changed by re-matching against a
-    perturbed B, per axis, averaged over noise draws."""
+    perturbed B, per axis, averaged over noise draws.
+
+    Both the base and the perturbed matching must come from restarts,
+    otherwise the churn measured is mostly coordinate descent landing in
+    different local optima rather than genuine sensitivity to the
+    perturbation. `restarts` trades cost against residual solver noise.
+    """
     if base_perms is None:
-        base_perms = weight_matching(sd_a, sd_b)
+        base_perms, _, _ = weight_matching_restarts(sd_a, sd_b)
     live_a, live_b = live_masks(sd_a), live_masks(sd_b)
     gen = torch.Generator().manual_seed(rng_seed)
     churn = {p: [] for p in PERM_AXES}
@@ -66,7 +75,7 @@ def perturbation_sensitivity(sd_a, sd_b, base_perms=None, eps=NOISE_EPS,
             if n > 0:
                 noise *= eps * v.norm() / n
             sd_bp[k] = v + noise
-        perms = weight_matching(sd_a, sd_bp)
+        perms, _, _ = weight_matching_restarts(sd_a, sd_bp, n_restarts=restarts)
         for p in PERM_AXES:
             el = _eligible(live_a[p], live_b[p], base_perms[p])
             churn[p].append(float(np.mean(perms[p][el] != base_perms[p][el]))
@@ -94,7 +103,7 @@ def assignment_gap(sd_a, sd_b, perms=None):
     """Best minus second-best assignment cost per axis, on the live
     submatrix at the converged matching."""
     if perms is None:
-        perms = weight_matching(sd_a, sd_b)
+        perms, _, _ = weight_matching_restarts(sd_a, sd_b)
     live_a, live_b = live_masks(sd_a), live_masks(sd_b)
     out = {}
     for p in PERM_AXES:
