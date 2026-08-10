@@ -26,7 +26,7 @@ import numpy as np
 import torch
 from scipy.optimize import linear_sum_assignment
 
-from .align import (PERM_SIZES, DEAD_NORM, unit_norms, axis_cost_matrix,
+from .align import (PERM_AXES, DEAD_NORM, unit_norms, axis_cost_matrix,
                     weight_matching)
 
 NOISE_EPS = 1e-2
@@ -35,7 +35,7 @@ RESTART_SEEDS = 10
 
 
 def live_masks(sd):
-    return {p: unit_norms(sd, p) > DEAD_NORM for p in PERM_SIZES}
+    return {p: unit_norms(sd, p) > DEAD_NORM for p in PERM_AXES}
 
 
 def _eligible(live_a, live_b, perm):
@@ -51,7 +51,7 @@ def perturbation_sensitivity(sd_a, sd_b, base_perms=None, eps=NOISE_EPS,
         base_perms = weight_matching(sd_a, sd_b)
     live_a, live_b = live_masks(sd_a), live_masks(sd_b)
     gen = torch.Generator().manual_seed(rng_seed)
-    churn = {p: [] for p in PERM_SIZES}
+    churn = {p: [] for p in PERM_AXES}
     for _ in range(draws):
         sd_bp = {}
         for k, v in sd_b.items():
@@ -61,13 +61,13 @@ def perturbation_sensitivity(sd_a, sd_b, base_perms=None, eps=NOISE_EPS,
                 noise *= eps * v.norm() / n
             sd_bp[k] = v + noise
         perms = weight_matching(sd_a, sd_bp)
-        for p in PERM_SIZES:
+        for p in PERM_AXES:
             el = _eligible(live_a[p], live_b[p], base_perms[p])
             churn[p].append(float(np.mean(perms[p][el] != base_perms[p][el]))
                             if el.any() else 0.0)
     return {p: {"churn_mean": float(np.mean(churn[p])),
                 "churn_std": float(np.std(churn[p])),
-                "eps": eps, "draws": draws} for p in PERM_SIZES}
+                "eps": eps, "draws": draws} for p in PERM_AXES}
 
 
 def lap_gap(C):
@@ -91,7 +91,7 @@ def assignment_gap(sd_a, sd_b, perms=None):
         perms = weight_matching(sd_a, sd_b)
     live_a, live_b = live_masks(sd_a), live_masks(sd_b)
     out = {}
-    for p in PERM_SIZES:
+    for p in PERM_AXES:
         C = axis_cost_matrix(sd_a, sd_b, p, perms)
         C = C[np.ix_(live_a[p], live_b[p])]
         v1, v2 = lap_gap(C)
@@ -114,7 +114,7 @@ def restart_disagreement(sd_a, sd_b, seeds=tuple(range(RESTART_SEEDS)),
             perm_list.append(weight_matching(sd_a, sd_b, seed=s))
     live_a, live_b = live_masks(sd_a), live_masks(sd_b)
     stats = {}
-    for p in PERM_SIZES:
+    for p in PERM_AXES:
         targets = np.stack([perms[p] for perms in perm_list])
         el = _eligible(live_a[p], live_b[p], targets[0])
         varies = (targets != targets[0]).any(axis=0)

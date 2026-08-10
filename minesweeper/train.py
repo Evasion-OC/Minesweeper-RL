@@ -31,16 +31,19 @@ def set_seed(seed):
     torch.manual_seed(seed)
 
 
-def make_model(variant):
+def make_model(variant, width=1):
     if variant == "plain":
-        return DQN()
+        return DQN(width=width)
     if variant == "equivariant":
+        if width != 1:
+            raise ValueError("width scaling is implemented for the plain variant only")
         return EquivariantDQN()
     raise ValueError(f"unknown variant {variant!r}")
 
 
 def train(n_rows=8, n_cols=8, num_mines=10,
           variant="plain",
+          width=1,
           seed=0,
           episodes_per_batch=1000,
           num_batches=2,
@@ -71,8 +74,8 @@ def train(n_rows=8, n_cols=8, num_mines=10,
     csv_path = os.path.join(out_dir, f"{run_name}_log.csv")
 
     env = MinesweeperEnv(n_rows=n_rows, n_cols=n_cols, num_mines=num_mines)
-    policy_net = make_model(variant).to(device)
-    target_net = make_model(variant).to(device)
+    policy_net = make_model(variant, width=width).to(device)
+    target_net = make_model(variant, width=width).to(device)
     target_net.load_state_dict(policy_net.state_dict())
     target_net.eval()
     optimizer = optim.Adam(policy_net.parameters(), lr=learning_rate, weight_decay=1e-5)

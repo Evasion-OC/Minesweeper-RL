@@ -29,10 +29,11 @@ import numpy as np  # noqa: E402
 import torch  # noqa: E402
 
 from minesweeper.env import MinesweeperEnv  # noqa: E402
-from minesweeper.models import DQN, pick_device  # noqa: E402
+from minesweeper.models import DQN, infer_width, pick_device  # noqa: E402
 from minesweeper.eval import evaluate  # noqa: E402
-from wsl.align import (PERM_SIZES, DEAD_NORM, unit_norms,  # noqa: E402
+from wsl.align import (PERM_AXES, DEAD_NORM, unit_norms,  # noqa: E402
                        weight_matching, apply_perms, interpolate)
+
 
 def traj_pairs():
     """Every zoo seed's batch1-to-best pair, plus the long plain run."""
@@ -55,9 +56,10 @@ def identity_fraction(perms, live=None):
     optionally restricted to live units (live: dict axis -> bool mask)."""
     per, sizes = {}, {}
     for p in perms:
-        keep = live[p] if live is not None else np.ones(PERM_SIZES[p], bool)
+        n_units = len(perms[p])
+        keep = live[p] if live is not None else np.ones(n_units, bool)
         n = int(keep.sum())
-        per[p] = float(np.mean(perms[p][keep] == np.arange(PERM_SIZES[p])[keep])) if n else 1.0
+        per[p] = float(np.mean(perms[p][keep] == np.arange(n_units)[keep])) if n else 1.0
         sizes[p] = n
     total = sum(sizes.values())
     overall = sum(per[p] * sizes[p] for p in perms) / total if total else 1.0
@@ -65,7 +67,7 @@ def identity_fraction(perms, live=None):
 
 
 def eval_sd(sd, env, episodes, device, seed):
-    model = DQN().to(device)
+    model = DQN(width=infer_width(sd)).to(device)
     model.load_state_dict(sd)
     model.eval()
     return evaluate(model, env, episodes, device, seed=seed)
@@ -94,8 +96,8 @@ def main():
     # an exact zero-cost tie class and may permute among themselves
     for path in sorted(glob.glob(args.self_glob)):
         sd = torch.load(path, map_location="cpu")
-        live = {p: unit_norms(sd, p) > DEAD_NORM for p in PERM_SIZES}
-        dead = {p: int(PERM_SIZES[p] - live[p].sum()) for p in PERM_SIZES}
+        live = {p: unit_norms(sd, p) > DEAD_NORM for p in PERM_AXES}
+        dead = {p: int(len(live[p]) - live[p].sum()) for p in PERM_AXES}
         perms = weight_matching(sd, sd)
         per_live, overall_live = identity_fraction(perms, live)
         ok = overall_live == 1.0
@@ -116,7 +118,7 @@ def main():
         sd_a = torch.load(early, map_location="cpu")
         sd_b = torch.load(late, map_location="cpu")
         live = {p: (unit_norms(sd_a, p) > DEAD_NORM) | (unit_norms(sd_b, p) > DEAD_NORM)
-                for p in PERM_SIZES}
+                for p in PERM_AXES}
         perms = weight_matching(sd_a, sd_b)
         per, overall = identity_fraction(perms)
         per_live, overall_live = identity_fraction(perms, live)

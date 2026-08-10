@@ -24,6 +24,9 @@ def pick_device(name=None):
     return torch.device("cpu")
 
 
+BASE_CHANNELS = (32, 64, 64, 256)  # conv1, conv2, conv3, value_fc1 hidden
+
+
 class DQN(nn.Module):
     """Dueling DQN. One Q value per cell, any board size.
 
@@ -36,16 +39,24 @@ class DQN(nn.Module):
     Unlike the monolith, the constructor takes no (height, width, num_actions):
     the output size is H*W of whatever input it sees, which is what allows one
     checkpoint to be evaluated across board sizes.
+
+    `width` scales every hidden channel count by an integer multiplier, for the
+    width sweep. width=1 reproduces the shipped architecture exactly, so
+    existing checkpoints load unchanged.
     """
 
-    def __init__(self, num_scalars=2):
+    def __init__(self, num_scalars=2, width=1):
         super().__init__()
-        self.conv1 = nn.Conv2d(2, 32, kernel_size=3, padding=1)
-        self.conv2 = nn.Conv2d(32, 64, kernel_size=3, padding=1)
-        self.conv3 = nn.Conv2d(64, 64, kernel_size=3, padding=1)
-        self.advantage_conv = nn.Conv2d(64, 1, kernel_size=1)
-        self.value_fc1 = nn.Linear(64 + num_scalars, 256)
-        self.value_fc2 = nn.Linear(256, 1)
+        if width < 1 or width != int(width):
+            raise ValueError(f"width must be a positive integer, got {width!r}")
+        c1, c2, c3, h = (c * int(width) for c in BASE_CHANNELS)
+        self.width = int(width)
+        self.conv1 = nn.Conv2d(2, c1, kernel_size=3, padding=1)
+        self.conv2 = nn.Conv2d(c1, c2, kernel_size=3, padding=1)
+        self.conv3 = nn.Conv2d(c2, c3, kernel_size=3, padding=1)
+        self.advantage_conv = nn.Conv2d(c3, 1, kernel_size=1)
+        self.value_fc1 = nn.Linear(c3 + num_scalars, h)
+        self.value_fc2 = nn.Linear(h, 1)
 
     def forward(self, spatial, scalars):
         x = F.relu(self.conv1(spatial))
@@ -64,16 +75,26 @@ class DQN(nn.Module):
         return v + adv
 
 
+def infer_width(state):
+    """Width multiplier of a plain-DQN state dict, from conv1's output channels."""
+    out = state["conv1.weight"].shape[0]
+    width, rem = divmod(out, BASE_CHANNELS[0])
+    if rem or width < 1:
+        raise ValueError(f"conv1 has {out} channels, not a multiple of {BASE_CHANNELS[0]}")
+    return width
+
+
 def load_dqn(path, device=None):
     """Load a checkpoint onto device, auto-detecting the variant from its
-    state dict (equivariant checkpoints carry lifting-layer keys)."""
+    state dict (equivariant checkpoints carry lifting-layer keys) and, for
+    plain checkpoints, the width multiplier."""
     device = device or pick_device()
     state = torch.load(path, map_location=device)
     if any(k.startswith("lift.") for k in state):
         from .equivariant import EquivariantDQN
         model = EquivariantDQN().to(device)
     else:
-        model = DQN().to(device)
+        model = DQN(width=infer_width(state)).to(device)
     model.load_state_dict(state)
     model.eval()
     return model

@@ -21,7 +21,27 @@ import numpy as np
 import torch
 from scipy.optimize import linear_sum_assignment
 
+PERM_AXES = ("p1", "p2", "p3", "p4")
+
+# Width-1 sizes. Everything below reads the actual sizes off the state dict
+# via perm_sizes(), so width-scaled checkpoints work unchanged; this constant
+# remains only as the default for random_perms and as a documented reference.
 PERM_SIZES = {"p1": 32, "p2": 64, "p3": 64, "p4": 256}
+
+
+def perm_sizes(sd):
+    """Permutable axis sizes read off a state dict, so any channel width works."""
+    return {"p1": int(sd["conv1.weight"].shape[0]),
+            "p2": int(sd["conv2.weight"].shape[0]),
+            "p3": int(sd["conv3.weight"].shape[0]),
+            "p4": int(sd["value_fc1.weight"].shape[0])}
+
+
+def pool_dim(sd):
+    """Number of value_fc1 input columns carrying p3 (the globally pooled
+    conv3 features). The remaining columns are the scalar inputs, which are
+    fixed points of every permutation."""
+    return int(sd["conv3.weight"].shape[0])
 
 # (param, axis) pairs carrying each permutation. value_fc1.weight's input
 # axis is split: columns 0:64 carry p3, columns 64:66 are fixed.
@@ -52,7 +72,8 @@ def _rows_matrix(sd, name, other_perm_idx):
     if name == "value_fc1.weight":
         w = w.copy()
         if other_perm_idx is not None:
-            w[:, :64] = w[:, :64][:, other_perm_idx]
+            d = pool_dim(sd)
+            w[:, :d] = w[:, :d][:, other_perm_idx]
         return w.reshape(w.shape[0], -1)
     if other_perm_idx is not None:
         w = w[:, other_perm_idx]
@@ -63,7 +84,7 @@ def _cols_matrix(sd, name, other_perm_idx):
     """Param as (perm_axis, rest) with the INPUT axis first."""
     w = _np(sd, name)
     if name == "value_fc1.weight":
-        w = w[:, :64]
+        w = w[:, :pool_dim(sd)]
     if other_perm_idx is not None:
         w = w[other_perm_idx]
     w = np.moveaxis(w, 1, 0)
@@ -81,7 +102,7 @@ def unit_norms(sd, p):
     """Per-unit norm over every weight slice carrying permutation axis p.
     Units below DEAD_NORM are numerically dead: an exact zero-cost tie class
     inside which any matching is arbitrary."""
-    sq = np.zeros(PERM_SIZES[p])
+    sq = np.zeros(perm_sizes(sd)[p])
     for name, _ in _ROW_PARAMS[p]:
         sq += (_rows_matrix(sd, name, None) ** 2).sum(axis=1)
     for name, _ in _COL_PARAMS[p]:
@@ -92,7 +113,7 @@ def unit_norms(sd, p):
 def axis_cost_matrix(sd_a, sd_b, p, perms):
     """Similarity matrix for axis p (A units x B units), summed over every
     weight slice carrying p, with B's other axes aligned by `perms`."""
-    n = PERM_SIZES[p]
+    n = perm_sizes(sd_a)[p]
     C = np.zeros((n, n))
     for name, other in _ROW_PARAMS[p]:
         A = _rows_matrix(sd_a, name, None)
@@ -107,9 +128,12 @@ def axis_cost_matrix(sd_a, sd_b, p, perms):
 
 def weight_matching(sd_a, sd_b, max_iter=100, seed=0):
     """Returns perms dict: perms[p][i] = index into B matched to A's unit i."""
+    sizes = perm_sizes(sd_a)
+    if sizes != perm_sizes(sd_b):
+        raise ValueError(f"width mismatch: A has {sizes}, B has {perm_sizes(sd_b)}")
     rng = np.random.default_rng(seed)
-    perms = {p: np.arange(n) for p, n in PERM_SIZES.items()}
-    names = list(PERM_SIZES)
+    perms = {p: np.arange(n) for p, n in sizes.items()}
+    names = list(sizes)
     for _ in range(max_iter):
         changed = False
         for p in rng.permutation(names):
@@ -137,17 +161,21 @@ def apply_perms(sd_b, perms):
     out["conv3.weight"] = out["conv3.weight"][p3][:, p2]
     out["conv3.bias"] = out["conv3.bias"][p3]
     out["advantage_conv.weight"] = out["advantage_conv.weight"][:, p3]
+    d = pool_dim(sd_b)
     w = out["value_fc1.weight"]
-    w = torch.cat([w[:, :64][:, p3], w[:, 64:]], dim=1)
+    w = torch.cat([w[:, :d][:, p3], w[:, d:]], dim=1)
     out["value_fc1.weight"] = w[p4]
     out["value_fc1.bias"] = out["value_fc1.bias"][p4]
     out["value_fc2.weight"] = out["value_fc2.weight"][:, p4]
     return out
 
 
-def random_perms(seed=0):
+def random_perms(seed=0, sd=None):
+    """Random permutation per axis. Sizes come from `sd` when given, else the
+    width-1 defaults."""
     rng = np.random.default_rng(seed)
-    return {p: rng.permutation(n) for p, n in PERM_SIZES.items()}
+    sizes = perm_sizes(sd) if sd is not None else PERM_SIZES
+    return {p: rng.permutation(n) for p, n in sizes.items()}
 
 
 def interpolate(sd_a, sd_b, lam):

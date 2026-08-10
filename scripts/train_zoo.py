@@ -28,6 +28,9 @@ def main():
     p.add_argument("--target-sync-steps", type=int, default=2_000)
     p.add_argument("--milestones", default="0,0.25,0.5,0.75",
                    help="training fractions to checkpoint (empty to disable)")
+    p.add_argument("--width", type=int, default=1,
+                   help="channel multiplier, for the width sweep")
+    p.add_argument("--prefix", default="zoo", help="run-name prefix")
     p.add_argument("--out-dir", default="checkpoints/zoo")
     p.add_argument("--device", default=None)
     args = p.parse_args()
@@ -36,13 +39,13 @@ def main():
 
     for seed in args.seeds:
         train(n_rows=args.rows, n_cols=args.cols, num_mines=args.mines,
-              variant="plain", seed=seed,
+              variant="plain", width=args.width, seed=seed,
               episodes_per_batch=args.episodes, num_batches=1,
               eval_episodes=args.eval_episodes,
               epsilon_decay_steps=args.epsilon_decay_steps,
               learning_starts=args.learning_starts,
               target_sync_steps=args.target_sync_steps,
-              out_dir=args.out_dir, run_name=f"zoo_seed{seed}",
+              out_dir=args.out_dir, run_name=f"{args.prefix}_seed{seed}",
               device=args.device, milestone_fracs=fracs)
 
 

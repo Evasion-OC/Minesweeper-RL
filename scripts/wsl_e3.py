@@ -29,9 +29,9 @@ import torch  # noqa: E402
 from scipy import stats as sps  # noqa: E402
 
 from minesweeper.env import MinesweeperEnv  # noqa: E402
-from minesweeper.models import DQN, pick_device  # noqa: E402
+from minesweeper.models import DQN, infer_width, pick_device  # noqa: E402
 from minesweeper.eval import evaluate  # noqa: E402
-from wsl.align import PERM_SIZES, weight_matching, apply_perms, interpolate  # noqa: E402
+from wsl.align import PERM_AXES, weight_matching, apply_perms, interpolate  # noqa: E402
 from wsl.degeneracy import AXIS_LAYER, layer_degeneracy  # noqa: E402
 from wsl.instability import (NOISE_DRAWS, NOISE_EPS, RESTART_SEEDS,  # noqa: E402
                              assignment_gap, perturbation_sensitivity,
@@ -74,7 +74,7 @@ def main():
     env = model = None
     if args.restart_episodes > 0:
         env = MinesweeperEnv(n_rows=args.rows, n_cols=args.cols, num_mines=args.mines)
-        model = DQN().to(pick_device(args.device))
+        model = DQN(width=infer_width(next(iter(sds.values())))).to(pick_device(args.device))
 
     results = []
     for a, b in pairs:
@@ -102,7 +102,7 @@ def main():
         line = f"pair {a} vs {b}: "
         line += "  ".join(
             f"{p_}[churn={pert[p_]['churn_mean']:.3f} relgap={gaps[p_]['rel_gap']:.2e} "
-            f"disagree={restart[p_]['disagree_frac']:.3f}]" for p_ in PERM_SIZES)
+            f"disagree={restart[p_]['disagree_frac']:.3f}]" for p_ in PERM_AXES)
         print(line, flush=True)
 
     out_path = Path(args.out)
