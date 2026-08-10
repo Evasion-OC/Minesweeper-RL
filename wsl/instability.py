@@ -13,9 +13,13 @@ defined in advance (no probe shopping):
       identifiability gap, by design; reported raw and relative to |best|.
   restart disagreement: weight matching's only stochastic component is the
       coordinate-descent axis order (the `seed` argument), so restarts vary
-      that. Reported as the fraction of live units whose assignment is not
-      unanimous across restarts. The realised-barrier variance over the
-      same restarts needs rollouts and lives in the driver script.
+      that. Raw disagreement conflates two things, and the probe separates
+      them: restarts that reach different objective values are the solver
+      failing, while restarts that TIE on the objective yet disagree on the
+      permutation are genuine non-uniqueness, which is what the paper's
+      claim is about. See restart_disagreement. The realised-barrier
+      variance over the same restarts needs rollouts and lives in the
+      driver script.
 
 Dead units (norm below wsl.align.DEAD_NORM, an exact zero-cost tie class;
 see scripts/wsl_nulls.py) are excluded from every count. Churn inside the
@@ -27,11 +31,13 @@ import torch
 from scipy.optimize import linear_sum_assignment
 
 from .align import (PERM_AXES, DEAD_NORM, unit_norms, axis_cost_matrix,
-                    weight_matching)
+                    matching_objective, weight_matching)
 
 NOISE_EPS = 1e-2
 NOISE_DRAWS = 10
 RESTART_SEEDS = 10
+# relative objective tolerance for calling two restarts tied
+OBJ_RTOL = 1e-6
 
 
 def live_masks(sd):
@@ -102,22 +108,51 @@ def assignment_gap(sd_a, sd_b, perms=None):
 
 
 def restart_disagreement(sd_a, sd_b, seeds=tuple(range(RESTART_SEEDS)),
-                         base_perms=None):
-    """Fraction of live units whose assignment is not unanimous across
-    coordinate-descent order seeds. Returns (stats, perm_list) so callers
-    can also evaluate realised barriers per restart."""
+                         base_perms=None, obj_rtol=OBJ_RTOL):
+    """Disagreement across coordinate-descent order seeds, split into the two
+    things it conflates.
+
+    Coordinate descent is a heuristic: different orderings can land in
+    different local optima, so raw disagreement mixes solver unreliability
+    with genuine non-uniqueness. Restarts are therefore partitioned by the
+    matching objective:
+
+      solver_success_frac: fraction of restarts reaching the best objective
+          found (within obj_rtol relative). Low means the solver is
+          unreliable here, which is a fact about the algorithm.
+      disagree_at_best: among only those restarts that tie on the objective,
+          the fraction of live units whose assignment is not unanimous. This
+          is the well-posedness measure the paper's claim is about: different
+          correspondences at the same cost.
+      disagree_frac: the old all-restarts measure, kept so earlier sweeps
+          stay comparable. Do not read it as well-posedness.
+
+    Returns (stats, perm_list).
+    """
     perm_list = []
     for s in seeds:
         if s == seeds[0] and base_perms is not None:
             perm_list.append(base_perms)
         else:
             perm_list.append(weight_matching(sd_a, sd_b, seed=s))
+    objectives = np.array([matching_objective(sd_a, sd_b, p) for p in perm_list])
+    best = objectives.min()
+    at_best = objectives <= best + obj_rtol * max(abs(best), 1e-12)
+
     live_a, live_b = live_masks(sd_a), live_masks(sd_b)
     stats = {}
     for p in PERM_AXES:
         targets = np.stack([perms[p] for perms in perm_list])
         el = _eligible(live_a[p], live_b[p], targets[0])
         varies = (targets != targets[0]).any(axis=0)
-        stats[p] = {"disagree_frac": float(np.mean(varies[el])) if el.any() else 0.0,
-                    "n_restarts": len(perm_list)}
+        tied = targets[at_best]
+        el_tied = _eligible(live_a[p], live_b[p], tied[0])
+        varies_tied = (tied != tied[0]).any(axis=0)
+        stats[p] = {
+            "disagree_frac": float(np.mean(varies[el])) if el.any() else 0.0,
+            "disagree_at_best": float(np.mean(varies_tied[el_tied])) if el_tied.any() else 0.0,
+            "n_restarts": len(perm_list),
+            "n_at_best": int(at_best.sum()),
+            "solver_success_frac": float(at_best.mean()),
+        }
     return stats, perm_list
