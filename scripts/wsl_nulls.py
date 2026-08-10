@@ -35,15 +35,17 @@ from wsl.align import (PERM_AXES, DEAD_NORM, unit_norms,  # noqa: E402
                        weight_matching, apply_perms, interpolate)
 
 
-def traj_pairs():
-    """Every zoo seed's batch1-to-best pair, plus the long plain run."""
+def traj_pairs(self_glob):
+    """batch1-to-best pairs for every seed the self glob covers, plus the
+    long plain run when the zoo is the target."""
     pairs = []
-    for early in sorted(glob.glob("checkpoints/zoo/*_batch1.pt")):
-        late = early.replace("_batch1.pt", "_best.pt")
-        if Path(late).exists():
+    for late in sorted(glob.glob(self_glob)):
+        early = late.replace("_best.pt", "_batch1.pt")
+        if early != late and Path(early).exists():
             pairs.append((early, late))
-    pairs.append(("checkpoints/plain_seed0_long_batch1.pt",
-                  "checkpoints/plain_seed0_long_best.pt"))
+    if "checkpoints/zoo" in self_glob:
+        pairs.append(("checkpoints/plain_seed0_long_batch1.pt",
+                      "checkpoints/plain_seed0_long_best.pt"))
     return pairs
 
 # trajectory pairs that also get the (more expensive) interpolation curves
@@ -110,7 +112,7 @@ def main():
 
     # --- same-run trajectory match: expected near-identity, near-equal curves
     env = MinesweeperEnv(n_rows=args.rows, n_cols=args.cols, num_mines=args.mines)
-    for early, late in traj_pairs():
+    for early, late in traj_pairs(args.self_glob):
         if not (Path(early).exists() and Path(late).exists()):
             print(f"traj  skipping missing pair {early} {late}", flush=True)
             continue
