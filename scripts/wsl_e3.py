@@ -42,6 +42,8 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--zoo", default="checkpoints/zoo/*_best.pt")
     p.add_argument("--pairs", type=int, default=0, help="0 = all pairs")
+    p.add_argument("--pair-start", type=int, default=0,
+                   help="skip this many pairs first (for splitting a population)")
     p.add_argument("--eps", type=float, default=NOISE_EPS)
     p.add_argument("--draws", type=int, default=NOISE_DRAWS)
     p.add_argument("--restart-seeds", type=int, default=RESTART_SEEDS)
@@ -70,8 +72,8 @@ def main():
             for ax, l in AXIS_LAYER.items()), flush=True)
 
     pairs = list(itertools.combinations(sorted(sds), 2))
-    if args.pairs:
-        pairs = pairs[:args.pairs]
+    end = args.pair_start + args.pairs if args.pairs else None
+    pairs = pairs[args.pair_start:end]
 
     env = model = None
     if args.restart_episodes > 0:
