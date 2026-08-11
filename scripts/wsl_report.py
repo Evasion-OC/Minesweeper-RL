@@ -25,21 +25,21 @@ import numpy as np  # noqa: E402
 import torch  # noqa: E402
 
 from minesweeper.env import MinesweeperEnv  # noqa: E402
-from minesweeper.models import DQN, pick_device  # noqa: E402
+from minesweeper.models import DQN, infer_width, pick_device  # noqa: E402
 from minesweeper.eval import evaluate  # noqa: E402
-from wsl.align import weight_matching, apply_perms, interpolate  # noqa: E402
+from wsl.align import weight_matching_restarts, apply_perms, interpolate  # noqa: E402
 from wsl.spectra import layer_spectra, LAYERS  # noqa: E402
 
 
 def eval_sd(sd, env, episodes, device, seed):
-    model = DQN().to(device)
+    model = DQN(width=infer_width(sd)).to(device)
     model.load_state_dict(sd)
     model.eval()
     return evaluate(model, env, episodes, device, seed=seed)
 
 
 def barrier_curves(sd_a, sd_b, env, episodes, device, lambdas, seed):
-    perms = weight_matching(sd_a, sd_b)
+    perms, _, _ = weight_matching_restarts(sd_a, sd_b)
     sd_b_aligned = apply_perms(sd_b, perms)
     out = {"naive": [], "aligned": []}
     for lam in lambdas:
@@ -65,7 +65,7 @@ def main():
     args = p.parse_args()
 
     device = pick_device(args.device)
-    paths = sorted(glob.glob(args.zoo))
+    paths = sorted(q for pat in args.zoo.split(",") for q in glob.glob(pat))
     if len(paths) < 2:
         sys.exit(f"need at least 2 checkpoints matching {args.zoo!r}, found {len(paths)}")
     lambdas = [float(v) for v in args.lambdas.split(",")]
