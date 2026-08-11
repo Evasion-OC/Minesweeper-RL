@@ -21,9 +21,9 @@ from .degeneracy import degeneracy_stats
 AXIS_MODULE = {"p1": "conv1", "p2": "conv2", "p3": "conv3", "p4": "value_fc1"}
 
 
-def activation_spectra(model, states, device, batch_size=512):
-    """{axis: descending singular values of the centred post-ReLU
-    activation matrix (units x samples)} over the probe buffer."""
+def activation_matrices(model, states, device, batch_size=512):
+    """{axis: post-ReLU activation matrix (units x samples)} over the
+    probe buffer."""
     acts = {ax: [] for ax in AXIS_MODULE}
     hooks = []
 
@@ -49,9 +49,15 @@ def activation_spectra(model, states, device, batch_size=512):
     finally:
         for h in hooks:
             h.remove()
+    return {ax: torch.cat(acts[ax], dim=1).double().numpy()
+            for ax in AXIS_MODULE}
+
+
+def activation_spectra(model, states, device, batch_size=512):
+    """{axis: descending singular values of the centred post-ReLU
+    activation matrix} over the probe buffer."""
     out = {}
-    for ax in AXIS_MODULE:
-        X = torch.cat(acts[ax], dim=1).double().numpy()
+    for ax, X in activation_matrices(model, states, device, batch_size).items():
         X = X - X.mean(axis=1, keepdims=True)
         out[ax] = np.linalg.svd(X / np.sqrt(X.shape[1]), compute_uv=False)
     return out
