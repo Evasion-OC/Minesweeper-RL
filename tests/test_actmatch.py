@@ -27,12 +27,23 @@ def test_recovers_exact_permutation_on_probe_active_units():
     b = DQN().eval()
     b.load_state_dict(sd_b)
     found = activation_matching(a, b, STATES, DEVICE)
-    acts = activation_matrices(a, STATES, DEVICE)
+    acts_a = activation_matrices(a, STATES, DEVICE)
+    acts_b = activation_matrices(b, STATES, DEVICE)
     for ax, perm in found.items():
         expected = np.argsort(true[ax])  # A's unit i sits at B position inv(true)[i]
-        active = acts[ax].std(axis=1) > 1e-12
-        assert (perm[active] == expected[active]).all(), ax
+        active = acts_a[ax].std(axis=1) > 1e-12
         assert active.mean() > 0.5, f"{ax}: probe excites too few units to test"
+        # off-expected assignments are acceptable only on an exact
+        # correlation tie (barely-active units spiking on the same states)
+        def z(X):
+            Xc = X - X.mean(axis=1, keepdims=True)
+            return Xc / np.maximum(X.std(axis=1, keepdims=True), 1e-12)
+        Za, Zb = z(acts_a[ax]), z(acts_b[ax])
+        for i in np.where(active)[0]:
+            if perm[i] == expected[i]:
+                continue
+            corr = float(Za[i] @ Zb[perm[i]] / Za.shape[1])
+            assert corr >= 1.0 - 1e-9, (ax, i, int(perm[i]), corr)
 
 
 def test_self_match_is_identity_up_to_exact_correlation_ties():
