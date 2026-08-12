@@ -20,3 +20,4 @@ results/*
 !results/wsl_spectra.png
 !results/ablation.csv
 logs_*.txt
+data/
