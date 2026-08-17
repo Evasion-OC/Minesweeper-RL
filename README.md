@@ -106,13 +106,53 @@ determined up to rotation within the cluster.
 
 Reproduce: `scripts/train_zoo.py`, then `scripts/wsl_report.py`.
 
+### From observation to measurement
+
+That near-flat-spectrum observation grew into a study of when permutation
+alignment can be trusted at all, now written up as a workshop paper (in
+preparation). The zoos grew to 156 networks: 36 DQNs across three channel
+widths plus 120 MNIST MLPs across four hidden widths, every population with
+untrained controls, and the suite in `wsl/` measures alignment reliability
+from the endpoint weights alone.
+
+<p align="center"><img src="results/figure1.png" width="900"></p>
+
+The short version of what came out:
+
+- **You can tell in advance which layers weight matching aligns reliably.**
+  A layer's spectral gap and the assignment problem's best-versus-second-best
+  margin rank the four axes correctly in 95% of pairs (permutation test
+  p < 1e-4). The value head sits at margins of 1e-13, the numerical tie
+  floor, where the matching is provably arbitrary; the dueling head's
+  argmax-invariance means that arbitrariness is behaviourally inert, and
+  aligning only the convolutions reproduces full alignment exactly.
+- **Identifiability and mergeability move in opposite directions.** The same
+  pipeline closes the barrier on wide MNIST MLPs and leaves it open here at
+  every width, and sweeping MLP width shows why: the barrier closes exactly
+  as the matching margins collapse. Wide networks merge because their unit
+  correspondences stop being unique; these RL agents keep well-determined
+  correspondences whose best permutation isn't enough.
+- **Single-run weight matching fails silently more often than not.** On
+  instances with a known exact solution, one coordinate-descent run recovers
+  the true permutation 40% of the time; two restarts recover all of them,
+  and five capture everything on real pairs. Every alignment number here
+  uses best-of-ten (`wsl.align.weight_matching_restarts`).
+
+The dead-unit tie classes, the exact non-uniqueness characterisation, and
+the full null battery (untrained zoos, noise-matched controls, activation
+covariance) are in the paper's appendix; every mathematical claim is also a
+unit test (`tests/test_proposition.py`).
+
 ## What's where
 
 ```
-minesweeper/         headless package: board, env, models, replay, train, eval, d4, equivariant
-wsl/                 permutation alignment + spectra
-scripts/             train_zoo, run_ablation, wsl_report
-tests/               D4 group axioms, numerical equivariance, alignment recovery
+minesweeper/         headless package: board, env, models (width-parameterised), replay, train, eval, d4, equivariant
+wsl/                 alignment (weight + activation matching, restarts), spectra, degeneracy and
+                     instability diagnostics, barriers, REPAIR, the MNIST MLP zoo machinery
+scripts/             train_zoo, train_mlp_zoo, run_ablation, wsl_report, wsl_nulls, wsl_e2, wsl_e3,
+                     wsl_e3_analysis, wsl_barrier_link, wsl_partial, wsl_z4, wsl_figure1
+tests/               D4 group axioms, equivariance, alignment recovery, width scaling, diagnostics,
+                     barrier convention, REPAIR, the proposition's claims
 Minesweeper_Solver.py   the original PyQt GUI app (play, watch the agent, deductive solvers)
 Graph_Pattern_Generation2.py   pattern mining for the deductive solver
 ```
@@ -128,6 +168,10 @@ python3 -m minesweeper.eval <checkpoint> --episodes 400 --sizes 8x8x10,16x16x40,
 python3 -m minesweeper.eval <checkpoint> --episodes 400 --sizes 8x8x10,16x16x40,16x30x99 --tta
 python3 scripts/train_zoo.py --seeds 1 2 3 4 5 6 --episodes 2500
 python3 scripts/wsl_report.py --zoo "checkpoints/zoo/*_best.pt" --pairs 4
+python3 scripts/wsl_nulls.py                     # pipeline sanity: self-match + same-run matches
+python3 scripts/wsl_e3.py                        # degeneracy + instability sweep over a zoo
+python3 scripts/train_mlp_zoo.py --hidden 512    # the MNIST control zoo
+python3 scripts/wsl_figure1.py                   # the paper figure, from committed results
 python3 Minesweeper_Solver.py                    # the GUI
 ```
 

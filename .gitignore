@@ -19,5 +19,6 @@ results/*
 !results/wsl_barriers.png
 !results/wsl_spectra.png
 !results/ablation.csv
+!results/figure1.png
 logs_*.txt
 data/
