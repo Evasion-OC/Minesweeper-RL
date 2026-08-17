@@ -62,10 +62,9 @@ def main():
                               weight_decay=5e-4)
         sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, T_max=args.epochs)
         train_loader = torch.utils.data.DataLoader(
-            train_ds, batch_size=args.batch, shuffle=True, num_workers=2,
+            train_ds, batch_size=args.batch, shuffle=True, num_workers=0,
             generator=torch.Generator().manual_seed(seed))
-        test_loader = torch.utils.data.DataLoader(test_ds, batch_size=1024,
-                                                  num_workers=2)
+        test_loader = torch.utils.data.DataLoader(test_ds, batch_size=1024)
         rows = []
         for epoch in range(1, args.epochs + 1):
             model.train()
