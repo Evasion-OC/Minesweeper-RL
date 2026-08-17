@@ -108,9 +108,47 @@ def panel_c(ax, rec_path):
                 xytext=(8, -11), fontsize=8.5)
     ax.set_xlabel("coordinate-descent restarts (best of $k$)")
     ax.set_ylabel("exact permutation recovered")
-    ax.set_title("(c) Restarts repair the matcher", fontsize=10)
+    ax.set_title("(d) Restarts repair the matcher", fontsize=10)
     ax.set_xticks(ks)
     ax.set_ylim(0.30, 1.06)
+
+
+def panel_d(ax, width_files, dqn_files):
+    """Identifiability vs mergeability: median conv/hidden-layer assignment
+    margin against the aligned relative barrier, MLP width family plus the
+    DQN width family."""
+    xs, ys, labels = [], [], []
+    for wlabel, path in width_files:
+        d = json.load(open(path))
+        probed = [e for e in d["pairs"] if "assignment_gap" in e]
+        axes_m = ("h1", "h2", "h3")
+        marg = np.median([e["assignment_gap"][ax]["rel_gap"]
+                          for e in probed for ax in axes_m])
+        bar = np.median([e["aligned_barrier"]["rel_barrier"] for e in d["pairs"]])
+        xs.append(max(marg, 1e-9)); ys.append(bar); labels.append(wlabel)
+    ax.plot(xs, ys, "-o", color=BLUE, lw=2.0, ms=6, zorder=3)
+    for x, y, lab in zip(xs, ys, labels):
+        ax.annotate(lab, (x, y), textcoords="offset points", xytext=(6, 6),
+                    fontsize=8, color=BLUE)
+    dx, dy, dl = [], [], []
+    for wlabel, e3_path, bar_val in dqn_files:
+        d = json.load(open(e3_path))
+        marg = np.median([e["assignment_gap"][ax]["rel_gap"]
+                          for e in d["pairs"] for ax in ("p1", "p2", "p3")])
+        dx.append(max(marg, 1e-9)); dy.append(bar_val); dl.append(wlabel)
+    ax.scatter(dx, dy, marker="s", s=42, color=ORANGE, zorder=3)
+    for x, y, lab in zip(dx, dy, dl):
+        ax.annotate(lab, (x, y), textcoords="offset points", xytext=(6, -11),
+                    fontsize=8, color=ORANGE)
+    ax.annotate("MNIST MLPs:\nmargins collapse,\nbarrier closes", (2.2e-5, 0.30),
+                fontsize=8, color=BLUE)
+    ax.annotate("RL DQNs: determined\nbut insufficient", (2.5e-4, 0.60),
+                fontsize=8, color=ORANGE)
+    ax.set_xscale("log")
+    ax.set_xlabel("assignment margin (median, behaviour-carrying layers)")
+    ax.set_ylabel("aligned relative barrier")
+    ax.set_title("(c) Identifiability vs mergeability", fontsize=10)
+    ax.set_ylim(-0.06, 1.0)
 
 
 def main():
@@ -125,10 +163,15 @@ def main():
     plt.rcParams.update({"font.size": 9, "axes.spines.top": False,
                          "axes.spines.right": False, "axes.grid": True,
                          "grid.alpha": 0.22, "grid.linewidth": 0.6})
-    fig, axes = plt.subplots(1, 3, figsize=(12.6, 3.7))
+    fig, axes = plt.subplots(1, 4, figsize=(16.4, 3.6))
     panel_a(axes[0], args.e3)
     panel_b(axes[1], args.dqn_barriers, args.mlp)
-    panel_c(axes[2], args.recovery)
+    panel_d(axes[2], [("32", "results/wsl_z4w32.json"), ("64", "results/wsl_z4w64.json"),
+                      ("128", "results/wsl_z4w128.json"), ("512", "results/wsl_z4.json")],
+            [("DQN 1x", "results/wsl_e3r_zoo16.json", 0.792),
+             ("2x", "results/wsl_e3r_w2.json", 0.812),
+             ("4x", "results/wsl_e3r_w4.json", 0.789)])
+    panel_c(axes[3], args.recovery)
     fig.tight_layout(w_pad=2.0)
     out = Path(args.out_dir)
     out.mkdir(parents=True, exist_ok=True)
