@@ -21,4 +21,5 @@ results/*
 !results/ablation.csv
 !results/figure1.png
 logs_*.txt
+logs/
 data/
