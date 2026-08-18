@@ -27,7 +27,7 @@ from wsl.degeneracy import AXIS_LAYER  # noqa: E402
 
 # validated categorical palette (dataviz reference instance, light mode)
 COLORS = {"p1": "#2a78d6", "p2": "#eb6834", "p3": "#1baf7a", "p4": "#eda100"}
-BLUE, ORANGE = "#2a78d6", "#eb6834"
+BLUE, ORANGE, AQUA = "#2a78d6", "#eb6834", "#1baf7a"
 LAYER_NAMES = {"p1": "conv1", "p2": "conv2", "p3": "conv3", "p4": "value fc"}
 LAMS = [0.0, 0.25, 0.5, 0.75, 1.0]
 
@@ -113,23 +113,29 @@ def panel_c(ax, rec_path):
     ax.set_ylim(0.30, 1.06)
 
 
-def panel_d(ax, width_files, dqn_files):
-    """Identifiability vs mergeability: median conv/hidden-layer assignment
-    margin against the aligned relative barrier, MLP width family plus the
-    DQN width family."""
+def _family_curve(files):
     xs, ys, labels = [], [], []
-    for wlabel, path in width_files:
+    for wlabel, path in files:
         d = json.load(open(path))
         probed = [e for e in d["pairs"] if "assignment_gap" in e]
-        axes_m = ("h1", "h2", "h3")
+        axes_m = sorted(probed[0]["assignment_gap"])
         marg = np.median([e["assignment_gap"][ax]["rel_gap"]
                           for e in probed for ax in axes_m])
         bar = np.median([e["aligned_barrier"]["rel_barrier"] for e in d["pairs"]])
         xs.append(max(marg, 1e-9)); ys.append(bar); labels.append(wlabel)
-    ax.plot(xs, ys, "-o", color=BLUE, lw=2.0, ms=6, zorder=3)
-    for x, y, lab in zip(xs, ys, labels):
-        ax.annotate(lab, (x, y), textcoords="offset points", xytext=(6, 6),
-                    fontsize=8, color=BLUE)
+    return xs, ys, labels
+
+
+def panel_d(ax, families, dqn_files):
+    """Identifiability vs mergeability: median assignment margin of the
+    permutable layers against the aligned relative barrier; supervised width
+    families as descending curves, the DQN width family off the curve."""
+    for fam_color, files in families:
+        xs, ys, labels = _family_curve(files)
+        ax.plot(xs, ys, "-o", color=fam_color, lw=2.0, ms=6, zorder=3)
+        for x, y, lab in zip(xs, ys, labels):
+            ax.annotate(lab, (x, y), textcoords="offset points", xytext=(6, 6),
+                        fontsize=8, color=fam_color)
     dx, dy, dl = [], [], []
     for wlabel, e3_path, bar_val in dqn_files:
         d = json.load(open(e3_path))
@@ -140,9 +146,9 @@ def panel_d(ax, width_files, dqn_files):
     for x, y, lab in zip(dx, dy, dl):
         ax.annotate(lab, (x, y), textcoords="offset points", xytext=(6, -11),
                     fontsize=8, color=ORANGE)
-    ax.annotate("MNIST MLPs:\nmargins collapse,\nbarrier closes", (2.2e-5, 0.30),
-                fontsize=8, color=BLUE)
-    ax.annotate("RL DQNs: determined\nbut insufficient", (2.5e-4, 0.60),
+    ax.annotate("MNIST\nMLPs", (1.1e-5, 0.13), fontsize=8, color=BLUE)
+    ax.annotate("CIFAR VGG\n(+REPAIR arm in text)", (1.5e-3, 0.42), fontsize=8, color=AQUA)
+    ax.annotate("RL DQNs: determined\nbut insufficient", (2.0e-4, 0.62),
                 fontsize=8, color=ORANGE)
     ax.set_xscale("log")
     ax.set_xlabel("assignment margin (median, behaviour-carrying layers)")
@@ -166,8 +172,11 @@ def main():
     fig, axes = plt.subplots(1, 4, figsize=(16.4, 3.6))
     panel_a(axes[0], args.e3)
     panel_b(axes[1], args.dqn_barriers, args.mlp)
-    panel_d(axes[2], [("32", "results/wsl_z4w32.json"), ("64", "results/wsl_z4w64.json"),
-                      ("128", "results/wsl_z4w128.json"), ("512", "results/wsl_z4.json")],
+    panel_d(axes[2],
+            [(BLUE, [("32", "results/wsl_z4w32.json"), ("64", "results/wsl_z4w64.json"),
+                     ("128", "results/wsl_z4w128.json"), ("512", "results/wsl_z4.json")]),
+             (AQUA, [("1/4", "results/wsl_cifar_m0p25.json"), ("1/2", "results/wsl_cifar_m0p5.json"),
+                     ("1", "results/wsl_cifar_m1p0.json")])],
             [("DQN 1x", "results/wsl_e3r_zoo16.json", 0.792),
              ("2x", "results/wsl_e3r_w2.json", 0.812),
              ("4x", "results/wsl_e3r_w4.json", 0.789)])
