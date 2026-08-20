@@ -1,0 +1,551 @@
+{
+  "config": {
+    "family": "mlp",
+    "data_dir": "data",
+    "device": null,
+    "seed": 0,
+    "out": null
+  },
+  "results": {
+    "z4_seed10_final": {
+      "uniform8": {
+        "degradation": 0.0,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0038999999999999035,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0038999999999999035,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.008099999999999996,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed11_final": {
+      "uniform8": {
+        "degradation": 9.999999999998899e-05,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0035999999999999366,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0024999999999999467,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.0046999999999999265,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed12_final": {
+      "uniform8": {
+        "degradation": -9.999999999998899e-05,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0031999999999999806,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0030000000000000027,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.005199999999999982,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed13_final": {
+      "uniform8": {
+        "degradation": -0.00019999999999997797,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0028000000000000247,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0009000000000000119,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.0035000000000000586,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed14_final": {
+      "uniform8": {
+        "degradation": -0.000300000000000078,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0042999999999999705,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0013999999999999568,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.0029000000000000137,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed15_final": {
+      "uniform8": {
+        "degradation": 0.00040000000000006697,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0041999999999999815,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0038000000000000256,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.007400000000000073,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed16_final": {
+      "uniform8": {
+        "degradation": 0.00029999999999996696,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0020999999999999908,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.007500000000000062,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.00990000000000002,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed17_final": {
+      "uniform8": {
+        "degradation": -0.00040000000000006697,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0008000000000000229,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.005299999999999971,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.011399999999999966,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed18_final": {
+      "uniform8": {
+        "degradation": -0.00029999999999996696,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0007000000000000339,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0028000000000000247,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.006900000000000017,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed19_final": {
+      "uniform8": {
+        "degradation": 9.999999999998899e-05,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0026000000000000467,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.006099999999999994,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.008400000000000074,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed1_final": {
+      "uniform8": {
+        "degradation": 0.0004999999999999449,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.008599999999999941,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 9.999999999998899e-05,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.006599999999999939,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed20_final": {
+      "uniform8": {
+        "degradation": -0.00029999999999996696,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.007800000000000029,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0043000000000000815,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.012500000000000067,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed21_final": {
+      "uniform8": {
+        "degradation": -0.00019999999999997797,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0019000000000000128,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.005599999999999938,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.00759999999999994,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed22_final": {
+      "uniform8": {
+        "degradation": 0.0,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0023999999999999577,
+        "avg_bits": 7.44468546637744
+      },
+      "anti": {
+        "degradation": 0.007000000000000006,
+        "avg_bits": 4.55531453362256
+      },
+      "uniform4": {
+        "degradation": 0.011299999999999977,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed23_final": {
+      "uniform8": {
+        "degradation": -0.00039999999999995595,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.006900000000000017,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0007000000000000339,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.006299999999999972,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed24_final": {
+      "uniform8": {
+        "degradation": 0.00029999999999996696,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.00039999999999995595,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": -9.999999999998899e-05,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.0022999999999999687,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed25_final": {
+      "uniform8": {
+        "degradation": 9.999999999998899e-05,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0048000000000000265,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": -0.0010999999999999899,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.0041999999999999815,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed26_final": {
+      "uniform8": {
+        "degradation": -0.00019999999999997797,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0043999999999999595,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0020000000000000018,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.005499999999999949,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed27_final": {
+      "uniform8": {
+        "degradation": -0.00039999999999995595,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0020000000000000018,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0046000000000000485,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.011099999999999999,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed28_final": {
+      "uniform8": {
+        "degradation": 0.00019999999999997797,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0030000000000000027,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0034000000000000696,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.00539999999999996,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed29_final": {
+      "uniform8": {
+        "degradation": 0.000200000000000089,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0035000000000000586,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0042000000000000925,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.005600000000000049,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed2_final": {
+      "uniform8": {
+        "degradation": 0.0,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0006000000000000449,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": -0.0012999999999999678,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.0006000000000000449,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed30_final": {
+      "uniform8": {
+        "degradation": -9.999999999998899e-05,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0045999999999999375,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0030000000000000027,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.009199999999999986,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed3_final": {
+      "uniform8": {
+        "degradation": -9.999999999998899e-05,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0031999999999999806,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.006900000000000017,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.008599999999999941,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed4_final": {
+      "uniform8": {
+        "degradation": -0.00019999999999997797,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0015000000000000568,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0014000000000000679,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.0021999999999999797,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed5_final": {
+      "uniform8": {
+        "degradation": -9.999999999998899e-05,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0035999999999999366,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0048000000000000265,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.006199999999999983,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed6_final": {
+      "uniform8": {
+        "degradation": -0.00029999999999996696,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.006800000000000028,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0008000000000000229,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.0121,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed7_final": {
+      "uniform8": {
+        "degradation": -0.00019999999999997797,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0007000000000000339,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0031999999999999806,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.0038000000000000256,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed8_final": {
+      "uniform8": {
+        "degradation": 0.0,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.00040000000000006697,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.0045000000000000595,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.007000000000000006,
+        "avg_bits": 4.0
+      }
+    },
+    "z4_seed9_final": {
+      "uniform8": {
+        "degradation": 0.0,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.0008000000000000229,
+        "avg_bits": 4.321041214750542
+      },
+      "anti": {
+        "degradation": 0.009600000000000053,
+        "avg_bits": 7.678958785249458
+      },
+      "uniform4": {
+        "degradation": 0.011500000000000066,
+        "avg_bits": 4.0
+      }
+    }
+  }
+}

@@ -1,0 +1,443 @@
+{
+  "config": {
+    "family": "cifar",
+    "data_dir": "data",
+    "device": null,
+    "seed": 0,
+    "out": null
+  },
+  "results": {
+    "cifar_m0p25_seed1_final": {
+      "uniform8": {
+        "degradation": 9.999999999998899e-05,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.06269999999999998,
+        "avg_bits": 4.1862723460604725
+      },
+      "anti": {
+        "degradation": 0.023399999999999976,
+        "avg_bits": 7.8137276539395275
+      },
+      "uniform4": {
+        "degradation": 0.06820000000000004,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m0p25_seed2_final": {
+      "uniform8": {
+        "degradation": -0.0010999999999999899,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.044399999999999995,
+        "avg_bits": 4.1862723460604725
+      },
+      "anti": {
+        "degradation": 0.022599999999999953,
+        "avg_bits": 7.8137276539395275
+      },
+      "uniform4": {
+        "degradation": 0.09399999999999997,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m0p25_seed3_final": {
+      "uniform8": {
+        "degradation": 0.0029000000000000137,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.06600000000000006,
+        "avg_bits": 4.567645111454425
+      },
+      "anti": {
+        "degradation": 0.02980000000000005,
+        "avg_bits": 7.432354888545575
+      },
+      "uniform4": {
+        "degradation": 0.1159,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m0p25_seed4_final": {
+      "uniform8": {
+        "degradation": -0.0005999999999999339,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.03090000000000004,
+        "avg_bits": 4.1862723460604725
+      },
+      "anti": {
+        "degradation": 0.05010000000000003,
+        "avg_bits": 7.8137276539395275
+      },
+      "uniform4": {
+        "degradation": 0.06340000000000001,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m0p25_seed5_final": {
+      "uniform8": {
+        "degradation": -0.0007000000000000339,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.043300000000000005,
+        "avg_bits": 4.1862723460604725
+      },
+      "anti": {
+        "degradation": 0.02179999999999993,
+        "avg_bits": 7.8137276539395275
+      },
+      "uniform4": {
+        "degradation": 0.06269999999999998,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m0p25_seed6_final": {
+      "uniform8": {
+        "degradation": 9.999999999998899e-05,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.034700000000000064,
+        "avg_bits": 4.1862723460604725
+      },
+      "anti": {
+        "degradation": 0.029000000000000026,
+        "avg_bits": 7.8137276539395275
+      },
+      "uniform4": {
+        "degradation": 0.0928,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m0p25_seed7_final": {
+      "uniform8": {
+        "degradation": 0.00019999999999997797,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.04710000000000003,
+        "avg_bits": 4.1862723460604725
+      },
+      "anti": {
+        "degradation": 0.06569999999999998,
+        "avg_bits": 7.8137276539395275
+      },
+      "uniform4": {
+        "degradation": 0.133,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m0p25_seed8_final": {
+      "uniform8": {
+        "degradation": 0.0004999999999999449,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.05840000000000001,
+        "avg_bits": 4.1862723460604725
+      },
+      "anti": {
+        "degradation": 0.06110000000000004,
+        "avg_bits": 7.8137276539395275
+      },
+      "uniform4": {
+        "degradation": 0.13970000000000005,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m0p5_seed1_final": {
+      "uniform8": {
+        "degradation": 0.0012000000000000899,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.04160000000000008,
+        "avg_bits": 4.285936631461923
+      },
+      "anti": {
+        "degradation": 0.031000000000000028,
+        "avg_bits": 7.714063368538077
+      },
+      "uniform4": {
+        "degradation": 0.04930000000000001,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m0p5_seed2_final": {
+      "uniform8": {
+        "degradation": 0.00010000000000010001,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.029900000000000038,
+        "avg_bits": 4.15786548082268
+      },
+      "anti": {
+        "degradation": 0.021200000000000108,
+        "avg_bits": 7.84213451917732
+      },
+      "uniform4": {
+        "degradation": 0.06590000000000007,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m0p5_seed3_final": {
+      "uniform8": {
+        "degradation": -0.0007999999999999119,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.02180000000000004,
+        "avg_bits": 4.15786548082268
+      },
+      "anti": {
+        "degradation": 0.03070000000000006,
+        "avg_bits": 7.84213451917732
+      },
+      "uniform4": {
+        "degradation": 0.07850000000000001,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m0p5_seed4_final": {
+      "uniform8": {
+        "degradation": 9.999999999998899e-05,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.019999999999999907,
+        "avg_bits": 4.285936631461923
+      },
+      "anti": {
+        "degradation": 0.020299999999999985,
+        "avg_bits": 7.714063368538077
+      },
+      "uniform4": {
+        "degradation": 0.037799999999999945,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m0p5_seed5_final": {
+      "uniform8": {
+        "degradation": -0.00029999999999996696,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.02870000000000006,
+        "avg_bits": 4.15786548082268
+      },
+      "anti": {
+        "degradation": 0.03090000000000004,
+        "avg_bits": 7.84213451917732
+      },
+      "uniform4": {
+        "degradation": 0.050000000000000044,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m0p5_seed6_final": {
+      "uniform8": {
+        "degradation": -0.00039999999999995595,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.013000000000000012,
+        "avg_bits": 4.15786548082268
+      },
+      "anti": {
+        "degradation": 0.023500000000000076,
+        "avg_bits": 7.84213451917732
+      },
+      "uniform4": {
+        "degradation": 0.03590000000000004,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m0p5_seed7_final": {
+      "uniform8": {
+        "degradation": 0.0,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.01969999999999994,
+        "avg_bits": 4.15786548082268
+      },
+      "anti": {
+        "degradation": 0.03059999999999996,
+        "avg_bits": 7.84213451917732
+      },
+      "uniform4": {
+        "degradation": 0.0524,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m0p5_seed8_final": {
+      "uniform8": {
+        "degradation": -0.0010000000000000009,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.019499999999999962,
+        "avg_bits": 4.15786548082268
+      },
+      "anti": {
+        "degradation": 0.027699999999999947,
+        "avg_bits": 7.84213451917732
+      },
+      "uniform4": {
+        "degradation": 0.04189999999999994,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m1p0_seed1_final": {
+      "uniform8": {
+        "degradation": 0.0010000000000000009,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.013500000000000068,
+        "avg_bits": 4.143502761814428
+      },
+      "anti": {
+        "degradation": 0.018199999999999994,
+        "avg_bits": 7.856497238185572
+      },
+      "uniform4": {
+        "degradation": 0.029299999999999993,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m1p0_seed2_final": {
+      "uniform8": {
+        "degradation": 9.999999999998899e-05,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.007900000000000018,
+        "avg_bits": 4.143502761814428
+      },
+      "anti": {
+        "degradation": 0.014100000000000001,
+        "avg_bits": 7.856497238185572
+      },
+      "uniform4": {
+        "degradation": 0.01990000000000003,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m1p0_seed3_final": {
+      "uniform8": {
+        "degradation": -0.00029999999999996696,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.019500000000000073,
+        "avg_bits": 4.272052669753948
+      },
+      "anti": {
+        "degradation": 0.009200000000000097,
+        "avg_bits": 7.727947330246052
+      },
+      "uniform4": {
+        "degradation": 0.0253000000000001,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m1p0_seed4_final": {
+      "uniform8": {
+        "degradation": -0.000300000000000078,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.006699999999999928,
+        "avg_bits": 4.143502761814428
+      },
+      "anti": {
+        "degradation": 0.006099999999999994,
+        "avg_bits": 7.856497238185572
+      },
+      "uniform4": {
+        "degradation": 0.015699999999999936,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m1p0_seed5_final": {
+      "uniform8": {
+        "degradation": 9.999999999998899e-05,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.011299999999999977,
+        "avg_bits": 4.143502761814428
+      },
+      "anti": {
+        "degradation": 0.021100000000000008,
+        "avg_bits": 7.856497238185572
+      },
+      "uniform4": {
+        "degradation": 0.04510000000000003,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m1p0_seed6_final": {
+      "uniform8": {
+        "degradation": -0.0009000000000000119,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.009399999999999964,
+        "avg_bits": 4.143502761814428
+      },
+      "anti": {
+        "degradation": 0.007299999999999973,
+        "avg_bits": 7.856497238185572
+      },
+      "uniform4": {
+        "degradation": 0.020999999999999908,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m1p0_seed7_final": {
+      "uniform8": {
+        "degradation": 0.00029999999999996696,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.010600000000000054,
+        "avg_bits": 4.272052669753948
+      },
+      "anti": {
+        "degradation": 0.006500000000000061,
+        "avg_bits": 7.727947330246052
+      },
+      "uniform4": {
+        "degradation": 0.025800000000000045,
+        "avg_bits": 4.0
+      }
+    },
+    "cifar_m1p0_seed8_final": {
+      "uniform8": {
+        "degradation": -0.00019999999999997797,
+        "avg_bits": 8.0
+      },
+      "guided": {
+        "degradation": 0.018300000000000094,
+        "avg_bits": 4.143502761814428
+      },
+      "anti": {
+        "degradation": 0.020300000000000096,
+        "avg_bits": 7.856497238185572
+      },
+      "uniform4": {
+        "degradation": 0.03290000000000004,
+        "avg_bits": 4.0
+      }
+    }
+  }
+}
