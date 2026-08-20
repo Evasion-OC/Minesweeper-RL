@@ -1,0 +1,230 @@
+[
+  {
+    "naive": [
+      {
+        "lam": 0.0,
+        "avg_reward": 8.660749999999997,
+        "win_rate": 0.125
+      },
+      {
+        "lam": 0.25,
+        "avg_reward": 4.371749999999997,
+        "win_rate": 0.055
+      },
+      {
+        "lam": 0.5,
+        "avg_reward": 1.8309999999999982,
+        "win_rate": 0.01
+      },
+      {
+        "lam": 0.75,
+        "avg_reward": 4.764999999999997,
+        "win_rate": 0.05
+      },
+      {
+        "lam": 1.0,
+        "avg_reward": 7.147499999999995,
+        "win_rate": 0.075
+      }
+    ],
+    "aligned": [
+      {
+        "lam": 0.0,
+        "avg_reward": 8.660749999999997,
+        "win_rate": 0.125
+      },
+      {
+        "lam": 0.25,
+        "avg_reward": 5.257249999999996,
+        "win_rate": 0.045
+      },
+      {
+        "lam": 0.5,
+        "avg_reward": 3.908249999999997,
+        "win_rate": 0.035
+      },
+      {
+        "lam": 0.75,
+        "avg_reward": 4.812249999999999,
+        "win_rate": 0.03
+      },
+      {
+        "lam": 1.0,
+        "avg_reward": 7.147499999999995,
+        "win_rate": 0.075
+      }
+    ],
+    "pair": "zoo_seed1_best vs zoo_seed2_best"
+  },
+  {
+    "naive": [
+      {
+        "lam": 0.0,
+        "avg_reward": 8.660749999999997,
+        "win_rate": 0.125
+      },
+      {
+        "lam": 0.25,
+        "avg_reward": 3.67,
+        "win_rate": 0.045
+      },
+      {
+        "lam": 0.5,
+        "avg_reward": 1.898999999999997,
+        "win_rate": 0.015
+      },
+      {
+        "lam": 0.75,
+        "avg_reward": 4.427999999999994,
+        "win_rate": 0.06
+      },
+      {
+        "lam": 1.0,
+        "avg_reward": 7.465749999999994,
+        "win_rate": 0.095
+      }
+    ],
+    "aligned": [
+      {
+        "lam": 0.0,
+        "avg_reward": 8.660749999999997,
+        "win_rate": 0.125
+      },
+      {
+        "lam": 0.25,
+        "avg_reward": 4.530999999999997,
+        "win_rate": 0.055
+      },
+      {
+        "lam": 0.5,
+        "avg_reward": 3.7839999999999976,
+        "win_rate": 0.05
+      },
+      {
+        "lam": 0.75,
+        "avg_reward": 5.413750000000001,
+        "win_rate": 0.08
+      },
+      {
+        "lam": 1.0,
+        "avg_reward": 7.465749999999994,
+        "win_rate": 0.095
+      }
+    ],
+    "pair": "zoo_seed1_best vs zoo_seed3_best"
+  },
+  {
+    "naive": [
+      {
+        "lam": 0.0,
+        "avg_reward": 8.660749999999997,
+        "win_rate": 0.125
+      },
+      {
+        "lam": 0.25,
+        "avg_reward": 0.9939999999999973,
+        "win_rate": 0.01
+      },
+      {
+        "lam": 0.5,
+        "avg_reward": 1.7642499999999983,
+        "win_rate": 0.01
+      },
+      {
+        "lam": 0.75,
+        "avg_reward": 3.1364999999999967,
+        "win_rate": 0.045
+      },
+      {
+        "lam": 1.0,
+        "avg_reward": 8.824499999999986,
+        "win_rate": 0.12
+      }
+    ],
+    "aligned": [
+      {
+        "lam": 0.0,
+        "avg_reward": 8.660749999999997,
+        "win_rate": 0.125
+      },
+      {
+        "lam": 0.25,
+        "avg_reward": 4.71325,
+        "win_rate": 0.05
+      },
+      {
+        "lam": 0.5,
+        "avg_reward": 4.664499999999997,
+        "win_rate": 0.05
+      },
+      {
+        "lam": 0.75,
+        "avg_reward": 6.5120000000000005,
+        "win_rate": 0.075
+      },
+      {
+        "lam": 1.0,
+        "avg_reward": 8.824499999999986,
+        "win_rate": 0.12
+      }
+    ],
+    "pair": "zoo_seed1_best vs zoo_seed4_best"
+  },
+  {
+    "naive": [
+      {
+        "lam": 0.0,
+        "avg_reward": 8.660749999999997,
+        "win_rate": 0.125
+      },
+      {
+        "lam": 0.25,
+        "avg_reward": 2.1147499999999977,
+        "win_rate": 0.03
+      },
+      {
+        "lam": 0.5,
+        "avg_reward": 0.5672499999999984,
+        "win_rate": 0.0
+      },
+      {
+        "lam": 0.75,
+        "avg_reward": 3.0244999999999997,
+        "win_rate": 0.035
+      },
+      {
+        "lam": 1.0,
+        "avg_reward": 7.601999999999991,
+        "win_rate": 0.09
+      }
+    ],
+    "aligned": [
+      {
+        "lam": 0.0,
+        "avg_reward": 8.660749999999997,
+        "win_rate": 0.125
+      },
+      {
+        "lam": 0.25,
+        "avg_reward": 7.829749999999993,
+        "win_rate": 0.105
+      },
+      {
+        "lam": 0.5,
+        "avg_reward": 3.4047499999999995,
+        "win_rate": 0.02
+      },
+      {
+        "lam": 0.75,
+        "avg_reward": 4.626249999999996,
+        "win_rate": 0.045
+      },
+      {
+        "lam": 1.0,
+        "avg_reward": 7.601999999999991,
+        "win_rate": 0.09
+      }
+    ],
+    "pair": "zoo_seed1_best vs zoo_seed5_best"
+  }
+]

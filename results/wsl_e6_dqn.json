@@ -1,0 +1,2533 @@
+{
+  "config": {
+    "family": "dqn",
+    "probe_states": 2048,
+    "reference": "checkpoints/plain_seed0_long_best.pt",
+    "data_dir": "data",
+    "device": null,
+    "seed": 0,
+    "out": null
+  },
+  "results": {
+    "z3_w2_seed101_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.03693660742859594,
+          "entropy": 0.9289972334408771,
+          "drange": 2.874674081802368,
+          "schemes": {
+            "int8_tensor": 0.00015054902178235352,
+            "int8_channel": 0.00011160723806824535,
+            "int4_tensor": 0.07711156457662582,
+            "int4_channel": 0.029870575293898582
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.00027845641064510907,
+          "entropy": 0.7946858467775252,
+          "drange": 6.098174095153809,
+          "schemes": {
+            "int8_tensor": 4.602759508998133e-05,
+            "int8_channel": 2.5671746698208153e-05,
+            "int4_tensor": 0.027113664895296097,
+            "int4_channel": 0.014414424076676369
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0004337678826107463,
+          "entropy": 0.3389030569001618,
+          "drange": 7.155930042266846,
+          "schemes": {
+            "int8_tensor": 7.444448328897124e-06,
+            "int8_channel": 1.604370481800288e-06,
+            "int4_tensor": 0.005333605222404003,
+            "int4_channel": 0.002219511428847909
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.327122688293457,
+          "schemes": {
+            "int8_tensor": 1.6715242963982746e-05,
+            "int8_channel": 1.6715242963982746e-05,
+            "int4_tensor": 0.0008573241648264229,
+            "int4_channel": 0.0008573241648264229
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0015298594056242089,
+          "entropy": 0.7101963400034275,
+          "drange": 6.598062992095947,
+          "schemes": {
+            "int8_tensor": 3.4039425145238056e-07,
+            "int8_channel": 3.32746985520771e-08,
+            "int4_tensor": 0.0010324126342311502,
+            "int4_channel": 0.00012368334864731878
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.5548417568206787,
+          "schemes": {
+            "int8_tensor": 6.606030833467003e-09,
+            "int8_channel": 6.606030833467003e-09,
+            "int4_tensor": 0.00025311618810519576,
+            "int4_channel": 0.00025311618810519576
+          }
+        }
+      }
+    },
+    "z3_w2_seed102_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.01018884801486075,
+          "entropy": 0.9238018330429351,
+          "drange": 3.05281400680542,
+          "schemes": {
+            "int8_tensor": 0.00010804705379996449,
+            "int8_channel": 6.352599302772433e-05,
+            "int4_tensor": 0.05204078555107117,
+            "int4_channel": 0.01928066648542881
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.002673756241698585,
+          "entropy": 0.7783572093047486,
+          "drange": 7.174801349639893,
+          "schemes": {
+            "int8_tensor": 2.9128148526069708e-05,
+            "int8_channel": 1.7349811969324946e-05,
+            "int4_tensor": 0.02316061407327652,
+            "int4_channel": 0.00521722249686718
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.00034700865549692735,
+          "entropy": 0.2675491535889523,
+          "drange": 6.585373401641846,
+          "schemes": {
+            "int8_tensor": 1.3974728290122584e-06,
+            "int8_channel": 1.0160944157178164e-06,
+            "int4_tensor": 0.002124820603057742,
+            "int4_channel": 0.0003388371260371059
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.111830234527588,
+          "schemes": {
+            "int8_tensor": 2.1171617845539004e-06,
+            "int8_channel": 2.1171617845539004e-06,
+            "int4_tensor": 5.325020174495876e-05,
+            "int4_channel": 5.325020174495876e-05
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.000555290415050895,
+          "entropy": 0.7032742482815122,
+          "drange": 6.014909744262695,
+          "schemes": {
+            "int8_tensor": 7.305798135348596e-07,
+            "int8_channel": 9.440417159112258e-08,
+            "int4_tensor": 3.562643541954458e-05,
+            "int4_channel": 1.9641738617792726e-05
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.371321201324463,
+          "schemes": {
+            "int8_tensor": 2.995372597069945e-06,
+            "int8_channel": 2.995372597069945e-06,
+            "int4_tensor": 0.00011647229257505387,
+            "int4_channel": 0.00011647229257505387
+          }
+        }
+      }
+    },
+    "z3_w2_seed103_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.005096670220714277,
+          "entropy": 0.9274821873000388,
+          "drange": 3.2394895553588867,
+          "schemes": {
+            "int8_tensor": 0.00026876854826696217,
+            "int8_channel": 8.295859879581258e-05,
+            "int4_tensor": 0.121583953499794,
+            "int4_channel": 0.0428975373506546
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.001149639018973315,
+          "entropy": 0.8237847056891101,
+          "drange": 6.6191487312316895,
+          "schemes": {
+            "int8_tensor": 9.054321708390489e-05,
+            "int8_channel": 4.545678530121222e-05,
+            "int4_tensor": 0.029607009142637253,
+            "int4_channel": 0.012816708534955978
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.00034448983790841183,
+          "entropy": 0.4206018474591826,
+          "drange": 7.052084445953369,
+          "schemes": {
+            "int8_tensor": 6.361854957503965e-06,
+            "int8_channel": 3.753355940716574e-06,
+            "int4_tensor": 0.004360281862318516,
+            "int4_channel": 0.0019916172605007887
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.35766863822937,
+          "schemes": {
+            "int8_tensor": 2.189915903727524e-05,
+            "int8_channel": 2.189915903727524e-05,
+            "int4_tensor": 0.01396936271339655,
+            "int4_channel": 0.01396936271339655
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0007369469679814556,
+          "entropy": 0.6935920135756468,
+          "drange": 6.432549953460693,
+          "schemes": {
+            "int8_tensor": 4.2124645460717147e-07,
+            "int8_channel": 1.0249572142129182e-06,
+            "int4_tensor": 0.00020824739476665854,
+            "int4_channel": 0.00019504134252201766
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.421952486038208,
+          "schemes": {
+            "int8_tensor": 6.9731413532281294e-06,
+            "int8_channel": 6.9731413532281294e-06,
+            "int4_tensor": 0.00014677502622362226,
+            "int4_channel": 0.00014677502622362226
+          }
+        }
+      }
+    },
+    "z3_w2_seed104_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.02497706604865703,
+          "entropy": 0.9238575942221565,
+          "drange": 2.9080753326416016,
+          "schemes": {
+            "int8_tensor": 0.0002251526602776721,
+            "int8_channel": 0.00012344378046691418,
+            "int4_tensor": 0.07773468643426895,
+            "int4_channel": 0.025997566059231758
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.0015694430935793828,
+          "entropy": 0.8252042959010887,
+          "drange": 7.051657676696777,
+          "schemes": {
+            "int8_tensor": 0.00010213822679361328,
+            "int8_channel": 4.602882108883932e-05,
+            "int4_tensor": 0.0656750351190567,
+            "int4_channel": 0.016575036570429802
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0007646761988093268,
+          "entropy": 0.3875825442293195,
+          "drange": 6.619962692260742,
+          "schemes": {
+            "int8_tensor": 6.57978580420604e-06,
+            "int8_channel": 3.924822976841824e-06,
+            "int4_tensor": 0.003720811801031232,
+            "int4_channel": 0.0023211226798594
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.2188327312469482,
+          "schemes": {
+            "int8_tensor": 3.4527236039139098e-06,
+            "int8_channel": 3.4527236039139098e-06,
+            "int4_tensor": 0.0026822094805538654,
+            "int4_channel": 0.0026822094805538654
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0007434298309627717,
+          "entropy": 0.7098314781168006,
+          "drange": 6.161396503448486,
+          "schemes": {
+            "int8_tensor": 2.492232908934966e-07,
+            "int8_channel": 3.838098550090763e-08,
+            "int4_tensor": 0.000586619193200022,
+            "int4_channel": 9.010251960717142e-05
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 3.3376412391662598,
+          "schemes": {
+            "int8_tensor": 1.5736081877548713e-06,
+            "int8_channel": 1.5736081877548713e-06,
+            "int4_tensor": 0.0003505301137920469,
+            "int4_channel": 0.0003505301137920469
+          }
+        }
+      }
+    },
+    "z3_w2_seed105_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.021493301259079296,
+          "entropy": 0.922652155015613,
+          "drange": 3.2338130474090576,
+          "schemes": {
+            "int8_tensor": 0.00015323745901696384,
+            "int8_channel": 6.703133840346709e-05,
+            "int4_tensor": 0.04737582802772522,
+            "int4_channel": 0.02297253906726837
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.0009546100405386444,
+          "entropy": 0.8362737721781724,
+          "drange": 8.384222030639648,
+          "schemes": {
+            "int8_tensor": 9.370121551910415e-05,
+            "int8_channel": 3.360306436661631e-05,
+            "int4_tensor": 0.03336847946047783,
+            "int4_channel": 0.012521116994321346
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0006237756199952313,
+          "entropy": 0.40721927859073404,
+          "drange": 6.98752498626709,
+          "schemes": {
+            "int8_tensor": 1.2519897609308828e-05,
+            "int8_channel": 1.070839243766386e-05,
+            "int4_tensor": 0.009772775694727898,
+            "int4_channel": 0.0036286606919020414
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.4474620819091797,
+          "schemes": {
+            "int8_tensor": 8.484810791742348e-07,
+            "int8_channel": 8.484810791742348e-07,
+            "int4_tensor": 0.0010705372551456094,
+            "int4_channel": 0.0010705372551456094
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0009416623794972105,
+          "entropy": 0.7184949550226304,
+          "drange": 8.042943954467773,
+          "schemes": {
+            "int8_tensor": 5.341729547581053e-07,
+            "int8_channel": 1.788166969163285e-06,
+            "int4_tensor": 0.0033126897178590298,
+            "int4_channel": 0.00014442743849940598
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 3.7228686809539795,
+          "schemes": {
+            "int8_tensor": 2.7988798478872923e-07,
+            "int8_channel": 2.7988798478872923e-07,
+            "int4_tensor": 0.0007907713879831135,
+            "int4_channel": 0.0007907713879831135
+          }
+        }
+      }
+    },
+    "z3_w2_seed106_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.01763144587142138,
+          "entropy": 0.9283968258598483,
+          "drange": 2.8250293731689453,
+          "schemes": {
+            "int8_tensor": 0.00015338700904976577,
+            "int8_channel": 0.00014722628111485392,
+            "int4_tensor": 0.055520910769701004,
+            "int4_channel": 0.04068465530872345
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.001438460455772651,
+          "entropy": 0.8034282590170555,
+          "drange": 7.09877347946167,
+          "schemes": {
+            "int8_tensor": 9.599213080946356e-05,
+            "int8_channel": 4.923908272758126e-05,
+            "int4_tensor": 0.028738809749484062,
+            "int4_channel": 0.02202076092362404
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0005931826495856716,
+          "entropy": 0.4342875570021894,
+          "drange": 9.849626541137695,
+          "schemes": {
+            "int8_tensor": 1.4163098057906609e-05,
+            "int8_channel": 1.1160358553752303e-05,
+            "int4_tensor": 0.024458423256874084,
+            "int4_channel": 0.00900211464613676
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.5648748874664307,
+          "schemes": {
+            "int8_tensor": 4.351690677140141e-06,
+            "int8_channel": 4.351690677140141e-06,
+            "int4_tensor": 0.00872325710952282,
+            "int4_channel": 0.00872325710952282
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0020112577135272007,
+          "entropy": 0.7619129444898882,
+          "drange": 6.881826877593994,
+          "schemes": {
+            "int8_tensor": 6.241144774321583e-07,
+            "int8_channel": 8.021786612744108e-08,
+            "int4_tensor": 0.0004963118117302656,
+            "int4_channel": 9.462542948313057e-05
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.7864480018615723,
+          "schemes": {
+            "int8_tensor": 1.4557360827893717e-07,
+            "int8_channel": 1.4557360827893717e-07,
+            "int4_tensor": 0.001664173905737698,
+            "int4_channel": 0.001664173905737698
+          }
+        }
+      }
+    },
+    "z3_w2_seed107_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.01092611950770573,
+          "entropy": 0.9093337032727434,
+          "drange": 2.8912761211395264,
+          "schemes": {
+            "int8_tensor": 0.00016765679174568504,
+            "int8_channel": 0.00016637482622172683,
+            "int4_tensor": 0.08687959611415863,
+            "int4_channel": 0.03505351394414902
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.0006055648206932252,
+          "entropy": 0.8261474316793365,
+          "drange": 8.563993453979492,
+          "schemes": {
+            "int8_tensor": 0.0001267263141926378,
+            "int8_channel": 3.8323792978189886e-05,
+            "int4_tensor": 0.035829510539770126,
+            "int4_channel": 0.01450760941952467
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 7.458442784145427e-05,
+          "entropy": 0.36634182465376114,
+          "drange": 7.528977394104004,
+          "schemes": {
+            "int8_tensor": 7.74610998632852e-06,
+            "int8_channel": 4.890554464509478e-06,
+            "int4_tensor": 0.004038678947836161,
+            "int4_channel": 0.0011777080362662673
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.2753665447235107,
+          "schemes": {
+            "int8_tensor": 1.1138434956592391e-06,
+            "int8_channel": 1.1138434956592391e-06,
+            "int4_tensor": 0.0011635541450232267,
+            "int4_channel": 0.0011635541450232267
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.000549397578922847,
+          "entropy": 0.6974474183840297,
+          "drange": 7.451314449310303,
+          "schemes": {
+            "int8_tensor": 2.1497629631994641e-07,
+            "int8_channel": 7.440997933372273e-07,
+            "int4_tensor": 0.0018004856538027525,
+            "int4_channel": 8.066820737440139e-05
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 3.246375322341919,
+          "schemes": {
+            "int8_tensor": 5.455293035083741e-07,
+            "int8_channel": 5.455293035083741e-07,
+            "int4_tensor": 0.0004117657954338938,
+            "int4_channel": 0.0004117657954338938
+          }
+        }
+      }
+    },
+    "z3_w2_seed108_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.01087046729603723,
+          "entropy": 0.9221383263587255,
+          "drange": 2.9213597774505615,
+          "schemes": {
+            "int8_tensor": 0.00025496596936136484,
+            "int8_channel": 0.0002472496998962015,
+            "int4_tensor": 0.08686263859272003,
+            "int4_channel": 0.040084462612867355
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.00012395577766855428,
+          "entropy": 0.7943150540135232,
+          "drange": 10.187089920043945,
+          "schemes": {
+            "int8_tensor": 0.00021576948347501457,
+            "int8_channel": 6.302554538706318e-05,
+            "int4_tensor": 0.20610123872756958,
+            "int4_channel": 0.024274252355098724
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0007219770893790063,
+          "entropy": 0.45111033526690364,
+          "drange": 7.773984432220459,
+          "schemes": {
+            "int8_tensor": 5.132375463290373e-06,
+            "int8_channel": 5.14744579049875e-06,
+            "int4_tensor": 0.006464152131229639,
+            "int4_channel": 0.0038583707064390182
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.491403579711914,
+          "schemes": {
+            "int8_tensor": 4.079912105225958e-05,
+            "int8_channel": 4.079912105225958e-05,
+            "int4_tensor": 0.002919260412454605,
+            "int4_channel": 0.002919260412454605
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0007991608167088492,
+          "entropy": 0.7066140903619088,
+          "drange": 7.111633777618408,
+          "schemes": {
+            "int8_tensor": 1.1609996590777882e-06,
+            "int8_channel": 9.433325232066636e-08,
+            "int4_tensor": 0.0014396350597962737,
+            "int4_channel": 0.00018551437824498862
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 3.048774242401123,
+          "schemes": {
+            "int8_tensor": 1.287201030208962e-06,
+            "int8_channel": 1.287201030208962e-06,
+            "int4_tensor": 0.00029088029987178743,
+            "int4_channel": 0.00029088029987178743
+          }
+        }
+      }
+    },
+    "z3_w2_seed109_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.0210194894925491,
+          "entropy": 0.9146872334870901,
+          "drange": 2.83988094329834,
+          "schemes": {
+            "int8_tensor": 0.00019185729615855962,
+            "int8_channel": 6.638989725615829e-05,
+            "int4_tensor": 0.02746068872511387,
+            "int4_channel": 0.019790299236774445
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.0008220932589352107,
+          "entropy": 0.7884845305480322,
+          "drange": 8.18580150604248,
+          "schemes": {
+            "int8_tensor": 9.44959101616405e-05,
+            "int8_channel": 4.489057755563408e-05,
+            "int4_tensor": 0.020975744351744652,
+            "int4_channel": 0.009202527813613415
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0006463465030141807,
+          "entropy": 0.39962023195615387,
+          "drange": 7.142373085021973,
+          "schemes": {
+            "int8_tensor": 2.921111445175484e-06,
+            "int8_channel": 4.99908901474555e-06,
+            "int4_tensor": 0.002849146258085966,
+            "int4_channel": 0.0016193116316571832
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.449298858642578,
+          "schemes": {
+            "int8_tensor": 3.472097887424752e-05,
+            "int8_channel": 3.472097887424752e-05,
+            "int4_tensor": 0.0027521001175045967,
+            "int4_channel": 0.0027521001175045967
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0002525458889366437,
+          "entropy": 0.617931731882608,
+          "drange": 6.514197826385498,
+          "schemes": {
+            "int8_tensor": 3.1171582577371737e-06,
+            "int8_channel": 1.4347424581728774e-08,
+            "int4_tensor": 0.0010473002912476659,
+            "int4_channel": 0.00010623263369780034
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.505913496017456,
+          "schemes": {
+            "int8_tensor": 1.8827070391580492e-07,
+            "int8_channel": 1.8827070391580492e-07,
+            "int4_tensor": 0.0002538686094339937,
+            "int4_channel": 0.0002538686094339937
+          }
+        }
+      }
+    },
+    "z3_w2_seed110_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.009496176775493007,
+          "entropy": 0.922726406419973,
+          "drange": 2.741131544113159,
+          "schemes": {
+            "int8_tensor": 0.0001305042824242264,
+            "int8_channel": 0.0001059304631780833,
+            "int4_tensor": 0.06439149379730225,
+            "int4_channel": 0.025409013032913208
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.0006042837986204875,
+          "entropy": 0.8207702408219902,
+          "drange": 6.889272689819336,
+          "schemes": {
+            "int8_tensor": 8.236427675001323e-05,
+            "int8_channel": 3.9766757254255936e-05,
+            "int4_tensor": 0.03360578790307045,
+            "int4_channel": 0.013136306777596474
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0002559219978586808,
+          "entropy": 0.3753783752741864,
+          "drange": 8.364473342895508,
+          "schemes": {
+            "int8_tensor": 1.4264875062508509e-05,
+            "int8_channel": 1.7889149603433907e-05,
+            "int4_tensor": 0.013765689916908741,
+            "int4_channel": 0.0035332911647856236
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.1990973949432373,
+          "schemes": {
+            "int8_tensor": 2.353723402848118e-06,
+            "int8_channel": 2.353723402848118e-06,
+            "int4_tensor": 0.013652313500642776,
+            "int4_channel": 0.013652313500642776
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0005310497494603814,
+          "entropy": 0.7374198457077582,
+          "drange": 6.574969291687012,
+          "schemes": {
+            "int8_tensor": 1.7415261766018375e-07,
+            "int8_channel": 6.602395785648696e-08,
+            "int4_tensor": 4.226666351314634e-05,
+            "int4_channel": 2.909166505560279e-05
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 3.879514217376709,
+          "schemes": {
+            "int8_tensor": 1.846349704237582e-07,
+            "int8_channel": 1.846349704237582e-07,
+            "int4_tensor": 0.00016367659554816782,
+            "int4_channel": 0.00016367659554816782
+          }
+        }
+      }
+    },
+    "z3_w4_seed101_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.010359092707736666,
+          "entropy": 0.9511148022918695,
+          "drange": 3.1209142208099365,
+          "schemes": {
+            "int8_tensor": 0.00014322796778287739,
+            "int8_channel": 6.550903344759718e-05,
+            "int4_tensor": 0.05068439990282059,
+            "int4_channel": 0.023845484480261803
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.0008471623696506701,
+          "entropy": 0.8377034860419829,
+          "drange": 9.487398147583008,
+          "schemes": {
+            "int8_tensor": 0.00018409313634037971,
+            "int8_channel": 5.3500974900089204e-05,
+            "int4_tensor": 0.08688417077064514,
+            "int4_channel": 0.01905481144785881
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 3.935017127162046e-06,
+          "entropy": 0.29546862036096566,
+          "drange": 7.334091663360596,
+          "schemes": {
+            "int8_tensor": 2.243719791295007e-06,
+            "int8_channel": 1.2385364698275225e-06,
+            "int4_tensor": 0.0065267872996628284,
+            "int4_channel": 0.0009146180236712098
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 1.9575960636138916,
+          "schemes": {
+            "int8_tensor": 8.006367124835378e-07,
+            "int8_channel": 8.006367124835378e-07,
+            "int4_tensor": 0.00037029030499979854,
+            "int4_channel": 0.00037029030499979854
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.00029655028279112664,
+          "entropy": 0.5322327853144352,
+          "drange": 11.415046691894531,
+          "schemes": {
+            "int8_tensor": 3.944253279541954e-08,
+            "int8_channel": 1.9508741289087084e-08,
+            "int4_tensor": 0.0382375568151474,
+            "int4_channel": 0.0001527168496977538
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.844486713409424,
+          "schemes": {
+            "int8_tensor": 2.9064338491480157e-07,
+            "int8_channel": 2.9064338491480157e-07,
+            "int4_tensor": 4.902830551145598e-05,
+            "int4_channel": 4.902830551145598e-05
+          }
+        }
+      }
+    },
+    "z3_w4_seed102_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.008706569920126962,
+          "entropy": 0.9491420620244415,
+          "drange": 3.378230333328247,
+          "schemes": {
+            "int8_tensor": 0.00019685222650878131,
+            "int8_channel": 9.624814265407622e-05,
+            "int4_tensor": 0.05565246194601059,
+            "int4_channel": 0.0197259783744812
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.0002220842583643576,
+          "entropy": 0.85363023471186,
+          "drange": 7.8092145919799805,
+          "schemes": {
+            "int8_tensor": 9.663090895628557e-05,
+            "int8_channel": 4.200612966087647e-05,
+            "int4_tensor": 0.029810864478349686,
+            "int4_channel": 0.012738436460494995
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.00017114990765999913,
+          "entropy": 0.305920618716114,
+          "drange": 7.886215686798096,
+          "schemes": {
+            "int8_tensor": 5.5496352615591604e-06,
+            "int8_channel": 1.7663163589531905e-06,
+            "int4_tensor": 0.011478260159492493,
+            "int4_channel": 0.0012034261599183083
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.1767570972442627,
+          "schemes": {
+            "int8_tensor": 2.2691854155709734e-06,
+            "int8_channel": 2.2691854155709734e-06,
+            "int4_tensor": 0.0014475429197773337,
+            "int4_channel": 0.0014475429197773337
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0004412225228566246,
+          "entropy": 0.767256192053888,
+          "drange": 8.905414581298828,
+          "schemes": {
+            "int8_tensor": 1.5095605476744822e-07,
+            "int8_channel": 4.398599457999808e-07,
+            "int4_tensor": 0.00018845335580408573,
+            "int4_channel": 3.430060678510927e-05
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 3.736128568649292,
+          "schemes": {
+            "int8_tensor": 5.368727684640362e-08,
+            "int8_channel": 5.368727684640362e-08,
+            "int4_tensor": 1.792201874195598e-05,
+            "int4_channel": 1.792201874195598e-05
+          }
+        }
+      }
+    },
+    "z3_w4_seed103_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.005760115734269137,
+          "entropy": 0.9426142548458554,
+          "drange": 2.9940810203552246,
+          "schemes": {
+            "int8_tensor": 0.00014695702702738345,
+            "int8_channel": 7.567935244878754e-05,
+            "int4_tensor": 0.061226118355989456,
+            "int4_channel": 0.022485947236418724
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.0005101301493773599,
+          "entropy": 0.8396289035561807,
+          "drange": 8.553437232971191,
+          "schemes": {
+            "int8_tensor": 0.00010125894186785445,
+            "int8_channel": 4.516242915997282e-05,
+            "int4_tensor": 0.03285931795835495,
+            "int4_channel": 0.016455281525850296
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.000265248307226735,
+          "entropy": 0.2691176464645139,
+          "drange": 6.953840255737305,
+          "schemes": {
+            "int8_tensor": 3.4971919831150444e-06,
+            "int8_channel": 9.836859362621908e-07,
+            "int4_tensor": 0.0019335310207679868,
+            "int4_channel": 0.0014062890550121665
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 1.9854121208190918,
+          "schemes": {
+            "int8_tensor": 5.22309221651085e-07,
+            "int8_channel": 5.22309221651085e-07,
+            "int4_tensor": 0.0004433978465385735,
+            "int4_channel": 0.0004433978465385735
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0011111940216489056,
+          "entropy": 0.5120027211900349,
+          "drange": 6.860355377197266,
+          "schemes": {
+            "int8_tensor": 1.4502027134710715e-08,
+            "int8_channel": 7.206503482848348e-08,
+            "int4_tensor": 0.0013222636189311743,
+            "int4_channel": 4.214690125081688e-05
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 3.2523021697998047,
+          "schemes": {
+            "int8_tensor": 1.6892677479063423e-08,
+            "int8_channel": 1.6892677479063423e-08,
+            "int4_tensor": 0.00026003981474786997,
+            "int4_channel": 0.00026003981474786997
+          }
+        }
+      }
+    },
+    "z3_w4_seed104_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.014547961579700185,
+          "entropy": 0.9465608843534397,
+          "drange": 2.9075496196746826,
+          "schemes": {
+            "int8_tensor": 0.00017886313435155898,
+            "int8_channel": 5.8804416767088696e-05,
+            "int4_tensor": 0.039965324103832245,
+            "int4_channel": 0.018289731815457344
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.00030120493365479075,
+          "entropy": 0.8538880740559343,
+          "drange": 9.4166841506958,
+          "schemes": {
+            "int8_tensor": 0.00013859235332347453,
+            "int8_channel": 4.633263961295597e-05,
+            "int4_tensor": 0.035649772733449936,
+            "int4_channel": 0.01578713394701481
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 2.0821083674282505e-05,
+          "entropy": 0.3252994637376931,
+          "drange": 8.02454662322998,
+          "schemes": {
+            "int8_tensor": 7.652054591744673e-06,
+            "int8_channel": 2.0841662262682803e-06,
+            "int4_tensor": 0.0029000507201999426,
+            "int4_channel": 0.0007249279879033566
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.000009298324585,
+          "schemes": {
+            "int8_tensor": 1.8368365317655844e-06,
+            "int8_channel": 1.8368365317655844e-06,
+            "int4_tensor": 0.0025284739676862955,
+            "int4_channel": 0.0025284739676862955
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0001885806711168757,
+          "entropy": 0.6493161042513539,
+          "drange": 12.202984809875488,
+          "schemes": {
+            "int8_tensor": 1.142360815720167e-06,
+            "int8_channel": 5.4343987088145695e-09,
+            "int4_tensor": 0.018692445009946823,
+            "int4_channel": 2.8249733077245764e-05
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 3.6233372688293457,
+          "schemes": {
+            "int8_tensor": 1.2274051641725237e-07,
+            "int8_channel": 1.2274051641725237e-07,
+            "int4_tensor": 0.0002733218716457486,
+            "int4_channel": 0.0002733218716457486
+          }
+        }
+      }
+    },
+    "z3_w4_seed105_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.020648177742834166,
+          "entropy": 0.94713775826883,
+          "drange": 3.2971930503845215,
+          "schemes": {
+            "int8_tensor": 0.0002299852785654366,
+            "int8_channel": 0.00010694943193811923,
+            "int4_tensor": 0.08423732221126556,
+            "int4_channel": 0.04160934314131737
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.0002734954042853354,
+          "entropy": 0.853041762199784,
+          "drange": 8.575885772705078,
+          "schemes": {
+            "int8_tensor": 0.00015784772404003888,
+            "int8_channel": 5.97479083808139e-05,
+            "int4_tensor": 0.058787763118743896,
+            "int4_channel": 0.018960528075695038
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.00024219166321188518,
+          "entropy": 0.3578508656230302,
+          "drange": 9.120859146118164,
+          "schemes": {
+            "int8_tensor": 8.658713340992108e-06,
+            "int8_channel": 4.035636266053189e-06,
+            "int4_tensor": 0.015125011093914509,
+            "int4_channel": 0.006019914522767067
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.169684410095215,
+          "schemes": {
+            "int8_tensor": 1.2715165667032124e-06,
+            "int8_channel": 1.2715165667032124e-06,
+            "int4_tensor": 0.001669350196607411,
+            "int4_channel": 0.001669350196607411
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0004341064787235618,
+          "entropy": 0.6286218881463485,
+          "drange": 11.776795387268066,
+          "schemes": {
+            "int8_tensor": 2.5891441168823803e-07,
+            "int8_channel": 6.522029138977814e-08,
+            "int4_tensor": 0.022196318954229355,
+            "int4_channel": 2.6208817871520296e-05
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.5775301456451416,
+          "schemes": {
+            "int8_tensor": 1.9512660287546169e-07,
+            "int8_channel": 1.9512660287546169e-07,
+            "int4_tensor": 2.89214603981236e-05,
+            "int4_channel": 2.89214603981236e-05
+          }
+        }
+      }
+    },
+    "z3_w4_seed106_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.030183764558354198,
+          "entropy": 0.9519904142261691,
+          "drange": 2.4872894287109375,
+          "schemes": {
+            "int8_tensor": 9.469158976571634e-05,
+            "int8_channel": 6.440476136049256e-05,
+            "int4_tensor": 0.04515442997217178,
+            "int4_channel": 0.022098859772086143
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.00043900509077938137,
+          "entropy": 0.8651389537836559,
+          "drange": 8.528569221496582,
+          "schemes": {
+            "int8_tensor": 0.00014782701327931136,
+            "int8_channel": 4.9498252337798476e-05,
+            "int4_tensor": 0.062083031982183456,
+            "int4_channel": 0.015111171640455723
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.00030873079641494707,
+          "entropy": 0.4051929178600406,
+          "drange": 8.533157348632812,
+          "schemes": {
+            "int8_tensor": 7.400743925245479e-06,
+            "int8_channel": 2.290304564667167e-06,
+            "int4_tensor": 0.008619091473519802,
+            "int4_channel": 0.0017393081216141582
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.0623302459716797,
+          "schemes": {
+            "int8_tensor": 8.296554483422369e-07,
+            "int8_channel": 8.296554483422369e-07,
+            "int4_tensor": 0.0005504194414243102,
+            "int4_channel": 0.0005504194414243102
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.00033253588402485675,
+          "entropy": 0.688622564492939,
+          "drange": 8.557239532470703,
+          "schemes": {
+            "int8_tensor": 2.104420900650439e-06,
+            "int8_channel": 1.0404355599291648e-08,
+            "int4_tensor": 0.001235912088304758,
+            "int4_channel": 8.686084584041964e-06
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.7164669036865234,
+          "schemes": {
+            "int8_tensor": 1.7260093443383084e-07,
+            "int8_channel": 1.7260093443383084e-07,
+            "int4_tensor": 4.4028289266861975e-05,
+            "int4_channel": 4.4028289266861975e-05
+          }
+        }
+      }
+    },
+    "z3_w4_seed107_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.027694577471860073,
+          "entropy": 0.9441702999930202,
+          "drange": 2.9295899868011475,
+          "schemes": {
+            "int8_tensor": 0.00017245156050194055,
+            "int8_channel": 9.366808080812916e-05,
+            "int4_tensor": 0.07204180955886841,
+            "int4_channel": 0.02083621546626091
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.0003146005347484622,
+          "entropy": 0.8451718615804036,
+          "drange": 9.131464958190918,
+          "schemes": {
+            "int8_tensor": 0.00020704088092315942,
+            "int8_channel": 5.9322130255168304e-05,
+            "int4_tensor": 0.04924210533499718,
+            "int4_channel": 0.018688151612877846
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.00022417734063272715,
+          "entropy": 0.38777290164749467,
+          "drange": 8.686124801635742,
+          "schemes": {
+            "int8_tensor": 1.0159922567254398e-05,
+            "int8_channel": 3.1104241315915715e-06,
+            "int4_tensor": 0.010199780575931072,
+            "int4_channel": 0.001756396726705134
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.061793327331543,
+          "schemes": {
+            "int8_tensor": 1.3817696071782848e-06,
+            "int8_channel": 1.3817696071782848e-06,
+            "int4_tensor": 0.00032573501812294126,
+            "int4_channel": 0.00032573501812294126
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.00030947326825266563,
+          "entropy": 0.7079237894271795,
+          "drange": 7.482944488525391,
+          "schemes": {
+            "int8_tensor": 1.483429514337331e-06,
+            "int8_channel": 5.5268024823362794e-08,
+            "int4_tensor": 0.002124869730323553,
+            "int4_channel": 1.24013313325122e-05
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 3.4342963695526123,
+          "schemes": {
+            "int8_tensor": 1.9227132952437387e-07,
+            "int8_channel": 1.9227132952437387e-07,
+            "int4_tensor": 9.514611883787438e-05,
+            "int4_channel": 9.514611883787438e-05
+          }
+        }
+      }
+    },
+    "z3_w4_seed108_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.01076504243437715,
+          "entropy": 0.9417989128082711,
+          "drange": 2.8186843395233154,
+          "schemes": {
+            "int8_tensor": 0.00012206726387375966,
+            "int8_channel": 6.194917659740895e-05,
+            "int4_tensor": 0.03414513170719147,
+            "int4_channel": 0.01799350418150425
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.00048434484884219553,
+          "entropy": 0.8275879017725439,
+          "drange": 9.847321510314941,
+          "schemes": {
+            "int8_tensor": 0.0001182091873488389,
+            "int8_channel": 4.872652789345011e-05,
+            "int4_tensor": 0.07816582918167114,
+            "int4_channel": 0.01783698797225952
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.00012292983283690356,
+          "entropy": 0.3033025539799727,
+          "drange": 9.381498336791992,
+          "schemes": {
+            "int8_tensor": 3.3023209198290715e-06,
+            "int8_channel": 8.419527148362249e-06,
+            "int4_tensor": 0.009089185856282711,
+            "int4_channel": 0.002677108161151409
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.3302414417266846,
+          "schemes": {
+            "int8_tensor": 2.2946283024793956e-06,
+            "int8_channel": 2.2946283024793956e-06,
+            "int4_tensor": 0.000438152375863865,
+            "int4_channel": 0.000438152375863865
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.00012701322606260382,
+          "entropy": 0.641641356620008,
+          "drange": 10.604510307312012,
+          "schemes": {
+            "int8_tensor": 7.996322182179938e-08,
+            "int8_channel": 7.22144744003117e-09,
+            "int4_tensor": 0.0024090262595564127,
+            "int4_channel": 8.259242167696357e-05
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.842442750930786,
+          "schemes": {
+            "int8_tensor": 1.0980369324897765e-07,
+            "int8_channel": 1.0980369324897765e-07,
+            "int4_tensor": 1.4581107279809657e-05,
+            "int4_channel": 1.4581107279809657e-05
+          }
+        }
+      }
+    },
+    "z3_w4_seed109_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.015485969438622516,
+          "entropy": 0.9505849016469254,
+          "drange": 3.035550594329834,
+          "schemes": {
+            "int8_tensor": 0.00015712378080934286,
+            "int8_channel": 5.8768840972334146e-05,
+            "int4_tensor": 0.07288296520709991,
+            "int4_channel": 0.019725192338228226
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.0006391918690833196,
+          "entropy": 0.8438390230941798,
+          "drange": 10.835959434509277,
+          "schemes": {
+            "int8_tensor": 0.00016871248953975737,
+            "int8_channel": 5.757891995017417e-05,
+            "int4_tensor": 0.14576788246631622,
+            "int4_channel": 0.017723383381962776
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0006841884706484284,
+          "entropy": 0.38668606917000176,
+          "drange": 7.054451942443848,
+          "schemes": {
+            "int8_tensor": 5.918414444749942e-06,
+            "int8_channel": 1.5129091934795724e-06,
+            "int4_tensor": 0.0030938577838242054,
+            "int4_channel": 0.0012496751733124256
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.200672149658203,
+          "schemes": {
+            "int8_tensor": 3.136622353849816e-06,
+            "int8_channel": 3.136622353849816e-06,
+            "int4_tensor": 0.000906896369997412,
+            "int4_channel": 0.000906896369997412
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.000310960253006246,
+          "entropy": 0.616881088342421,
+          "drange": 8.856649398803711,
+          "schemes": {
+            "int8_tensor": 2.3667222137646604e-07,
+            "int8_channel": 1.8164988091484702e-07,
+            "int4_tensor": 0.0005269281100481749,
+            "int4_channel": 9.46145664784126e-05
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 3.9296107292175293,
+          "schemes": {
+            "int8_tensor": 2.646668129102636e-08,
+            "int8_channel": 2.646668129102636e-08,
+            "int4_tensor": 0.00041208090260624886,
+            "int4_channel": 0.00041208090260624886
+          }
+        }
+      }
+    },
+    "z3_w4_seed110_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.016579653882480682,
+          "entropy": 0.9497642352562061,
+          "drange": 2.861572742462158,
+          "schemes": {
+            "int8_tensor": 0.00016542448429390788,
+            "int8_channel": 9.583382779965177e-05,
+            "int4_tensor": 0.04027494415640831,
+            "int4_channel": 0.0332869328558445
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.00045418836922135847,
+          "entropy": 0.8442357422917801,
+          "drange": 8.789058685302734,
+          "schemes": {
+            "int8_tensor": 0.00011051916953874752,
+            "int8_channel": 4.206235826131888e-05,
+            "int4_tensor": 0.041590332984924316,
+            "int4_channel": 0.016606567427515984
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.00012065830005538653,
+          "entropy": 0.31638559740799965,
+          "drange": 8.698925971984863,
+          "schemes": {
+            "int8_tensor": 9.579976904205978e-06,
+            "int8_channel": 1.588324380463746e-06,
+            "int4_tensor": 0.01181761920452118,
+            "int4_channel": 0.002998585347086191
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.079944372177124,
+          "schemes": {
+            "int8_tensor": 3.0377980237972224e-06,
+            "int8_channel": 3.0377980237972224e-06,
+            "int4_tensor": 0.00038416244206018746,
+            "int4_channel": 0.00038416244206018746
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.00039939065159318664,
+          "entropy": 0.5891352854420214,
+          "drange": 7.870604515075684,
+          "schemes": {
+            "int8_tensor": 5.237921740786078e-08,
+            "int8_channel": 6.963039567153828e-08,
+            "int4_tensor": 0.00033477836404927075,
+            "int4_channel": 0.00026481912937015295
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 3.073448896408081,
+          "schemes": {
+            "int8_tensor": 1.5292714650172456e-08,
+            "int8_channel": 1.5292714650172456e-08,
+            "int4_tensor": 0.0002679026802070439,
+            "int4_channel": 0.0002679026802070439
+          }
+        }
+      }
+    },
+    "zoo_seed10_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.028053537889151086,
+          "entropy": 0.8433971034679378,
+          "drange": 2.9158565998077393,
+          "schemes": {
+            "int8_tensor": 6.682295497739688e-05,
+            "int8_channel": 7.022089994279668e-05,
+            "int4_tensor": 0.01566973328590393,
+            "int4_channel": 0.02689117193222046
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.005742763754345652,
+          "entropy": 0.7739151129795288,
+          "drange": 6.6080427169799805,
+          "schemes": {
+            "int8_tensor": 7.666918827453628e-05,
+            "int8_channel": 1.5597903257003054e-05,
+            "int4_tensor": 0.024291785433888435,
+            "int4_channel": 0.005500907078385353
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0021956602436186768,
+          "entropy": 0.5447520859967677,
+          "drange": 8.103370666503906,
+          "schemes": {
+            "int8_tensor": 1.0424730135127902e-05,
+            "int8_channel": 7.889376320235897e-06,
+            "int4_tensor": 0.006316440645605326,
+            "int4_channel": 0.0011551100760698318
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.5346338748931885,
+          "schemes": {
+            "int8_tensor": 1.431244072591653e-06,
+            "int8_channel": 1.431244072591653e-06,
+            "int4_tensor": 0.0014484850689768791,
+            "int4_channel": 0.0014484850689768791
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0027717913395077015,
+          "entropy": 0.8599447048326424,
+          "drange": 4.207536220550537,
+          "schemes": {
+            "int8_tensor": 6.794946330046514e-07,
+            "int8_channel": 3.6488621901753504e-08,
+            "int4_tensor": 6.829715130152181e-05,
+            "int4_channel": 0.00012481847079470754
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.576058864593506,
+          "schemes": {
+            "int8_tensor": 3.2411364259132824e-08,
+            "int8_channel": 3.2411364259132824e-08,
+            "int4_tensor": 2.4034319721977226e-05,
+            "int4_channel": 2.4034319721977226e-05
+          }
+        }
+      }
+    },
+    "zoo_seed11_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.041227490007883213,
+          "entropy": 0.857089152014971,
+          "drange": 3.1784350872039795,
+          "schemes": {
+            "int8_tensor": 0.0001281687436858192,
+            "int8_channel": 0.00017718932940624654,
+            "int4_tensor": 0.08423581719398499,
+            "int4_channel": 0.028698259964585304
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.0011764277831006755,
+          "entropy": 0.767156744483752,
+          "drange": 6.183382034301758,
+          "schemes": {
+            "int8_tensor": 8.401452942052856e-05,
+            "int8_channel": 1.3464405128615908e-05,
+            "int4_tensor": 0.012424077838659286,
+            "int4_channel": 0.009747050702571869
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0007578495071166147,
+          "entropy": 0.3804512810394963,
+          "drange": 7.223564147949219,
+          "schemes": {
+            "int8_tensor": 1.1856250239361543e-05,
+            "int8_channel": 2.0452631360967644e-05,
+            "int4_tensor": 0.002276863669976592,
+            "int4_channel": 0.0015306140994653106
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.0473833084106445,
+          "schemes": {
+            "int8_tensor": 2.4561334157624515e-06,
+            "int8_channel": 2.4561334157624515e-06,
+            "int4_tensor": 0.004008379299193621,
+            "int4_channel": 0.004008379299193621
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0012239482138355331,
+          "entropy": 0.7698826736448221,
+          "drange": 5.4951605796813965,
+          "schemes": {
+            "int8_tensor": 3.24348974345412e-07,
+            "int8_channel": 8.956799320003483e-07,
+            "int4_tensor": 0.0034831552766263485,
+            "int4_channel": 0.00012397285900078714
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.1248257160186768,
+          "schemes": {
+            "int8_tensor": 5.169897576706717e-06,
+            "int8_channel": 5.169897576706717e-06,
+            "int4_tensor": 0.00015143220662139356,
+            "int4_channel": 0.00015143220662139356
+          }
+        }
+      }
+    },
+    "zoo_seed12_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.04552573163629956,
+          "entropy": 0.8592623696370374,
+          "drange": 3.5913572311401367,
+          "schemes": {
+            "int8_tensor": 0.00026150670601055026,
+            "int8_channel": 8.801605872577056e-05,
+            "int4_tensor": 0.058021754026412964,
+            "int4_channel": 0.019045986235141754
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.004811410500883824,
+          "entropy": 0.7747507202742867,
+          "drange": 5.558310031890869,
+          "schemes": {
+            "int8_tensor": 4.699650526163168e-05,
+            "int8_channel": 2.5768584237084724e-05,
+            "int4_tensor": 0.03348667919635773,
+            "int4_channel": 0.00836867280304432
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0011493786707262158,
+          "entropy": 0.5130024389681854,
+          "drange": 8.268526077270508,
+          "schemes": {
+            "int8_tensor": 2.3777598471497186e-05,
+            "int8_channel": 1.581000287842471e-05,
+            "int4_tensor": 0.007924203760921955,
+            "int4_channel": 0.0021404693834483624
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.8700406551361084,
+          "schemes": {
+            "int8_tensor": 7.773944162181579e-06,
+            "int8_channel": 7.773944162181579e-06,
+            "int4_tensor": 0.004349187482148409,
+            "int4_channel": 0.004349187482148409
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0025464373743124586,
+          "entropy": 0.8225557896352447,
+          "drange": 6.692205429077148,
+          "schemes": {
+            "int8_tensor": 1.4172146620694548e-05,
+            "int8_channel": 3.2278771300298104e-07,
+            "int4_tensor": 0.001257777796126902,
+            "int4_channel": 0.00020367620163597167
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.5163650512695312,
+          "schemes": {
+            "int8_tensor": 1.8440416624798672e-06,
+            "int8_channel": 1.8440416624798672e-06,
+            "int4_tensor": 1.5922811144264415e-05,
+            "int4_channel": 1.5922811144264415e-05
+          }
+        }
+      }
+    },
+    "zoo_seed13_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.023335872390778493,
+          "entropy": 0.8770029171849887,
+          "drange": 2.9370622634887695,
+          "schemes": {
+            "int8_tensor": 0.00019562203669920564,
+            "int8_channel": 8.18775370134972e-05,
+            "int4_tensor": 0.0648169070482254,
+            "int4_channel": 0.021922990679740906
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.00025456398189863713,
+          "entropy": 0.811851465246621,
+          "drange": 6.010427474975586,
+          "schemes": {
+            "int8_tensor": 8.292234997497872e-05,
+            "int8_channel": 5.152678568265401e-05,
+            "int4_tensor": 0.026699285954236984,
+            "int4_channel": 0.00879555381834507
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0015188229969378677,
+          "entropy": 0.46082768557091147,
+          "drange": 7.652278900146484,
+          "schemes": {
+            "int8_tensor": 1.9317096302984282e-05,
+            "int8_channel": 7.02014676789986e-06,
+            "int4_tensor": 0.008394001983106136,
+            "int4_channel": 0.0068902610801160336
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.487056016921997,
+          "schemes": {
+            "int8_tensor": 3.3869064282043837e-06,
+            "int8_channel": 3.3869064282043837e-06,
+            "int4_tensor": 0.0014563867589458823,
+            "int4_channel": 0.0014563867589458823
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0006737790598128101,
+          "entropy": 0.8875972423816918,
+          "drange": 6.667173862457275,
+          "schemes": {
+            "int8_tensor": 2.2098252827618126e-07,
+            "int8_channel": 4.789278023054067e-07,
+            "int4_tensor": 0.0022812101524323225,
+            "int4_channel": 0.00038764564669691026
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 4.50177526473999,
+          "schemes": {
+            "int8_tensor": 2.95380630177533e-07,
+            "int8_channel": 2.95380630177533e-07,
+            "int4_tensor": 0.00017597206169739366,
+            "int4_channel": 0.00017597206169739366
+          }
+        }
+      }
+    },
+    "zoo_seed14_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.030983534693806783,
+          "entropy": 0.8513760888336577,
+          "drange": 2.8976356983184814,
+          "schemes": {
+            "int8_tensor": 0.00012355955550447106,
+            "int8_channel": 0.00014071194163989276,
+            "int4_tensor": 0.04827291518449783,
+            "int4_channel": 0.03015974909067154
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.004558718865368906,
+          "entropy": 0.8070650153703098,
+          "drange": 6.150378704071045,
+          "schemes": {
+            "int8_tensor": 6.321565888356417e-05,
+            "int8_channel": 2.7817210138891824e-05,
+            "int4_tensor": 0.02393495664000511,
+            "int4_channel": 0.011613769456744194
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.001193805674679919,
+          "entropy": 0.48236019943456787,
+          "drange": 6.4528117179870605,
+          "schemes": {
+            "int8_tensor": 8.214503395720385e-06,
+            "int8_channel": 1.636213346500881e-05,
+            "int4_tensor": 0.006136889103800058,
+            "int4_channel": 0.002658516401425004
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.449718713760376,
+          "schemes": {
+            "int8_tensor": 2.5892702524288325e-06,
+            "int8_channel": 2.5892702524288325e-06,
+            "int4_tensor": 0.0007629534811712801,
+            "int4_channel": 0.0007629534811712801
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0018356625140396384,
+          "entropy": 0.7258874177012649,
+          "drange": 4.178477764129639,
+          "schemes": {
+            "int8_tensor": 2.963275562706258e-07,
+            "int8_channel": 3.92249694414204e-06,
+            "int4_tensor": 6.610793934669346e-05,
+            "int4_channel": 0.00023387878900393844
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.7409236431121826,
+          "schemes": {
+            "int8_tensor": 6.831375230831327e-06,
+            "int8_channel": 6.831375230831327e-06,
+            "int4_tensor": 0.003089372767135501,
+            "int4_channel": 0.003089372767135501
+          }
+        }
+      }
+    },
+    "zoo_seed15_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.02459252895798139,
+          "entropy": 0.8365142580336462,
+          "drange": 3.1852622032165527,
+          "schemes": {
+            "int8_tensor": 0.0002000770764425397,
+            "int8_channel": 8.100317791104317e-05,
+            "int4_tensor": 0.04196324571967125,
+            "int4_channel": 0.0180913507938385
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.004387295084534728,
+          "entropy": 0.7797721811650614,
+          "drange": 6.345541477203369,
+          "schemes": {
+            "int8_tensor": 6.253761239349842e-05,
+            "int8_channel": 1.568155494169332e-05,
+            "int4_tensor": 0.018431704491376877,
+            "int4_channel": 0.006024354137480259
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.003263584092098169,
+          "entropy": 0.47321000781391265,
+          "drange": 7.365372180938721,
+          "schemes": {
+            "int8_tensor": 6.485948233603267e-06,
+            "int8_channel": 1.0780349839478731e-05,
+            "int4_tensor": 0.006165452301502228,
+            "int4_channel": 0.0011125390883535147
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.321658134460449,
+          "schemes": {
+            "int8_tensor": 4.721440291177714e-06,
+            "int8_channel": 4.721440291177714e-06,
+            "int4_tensor": 0.00154232163913548,
+            "int4_channel": 0.00154232163913548
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0011733850472926944,
+          "entropy": 0.7962532287709562,
+          "drange": 7.8416595458984375,
+          "schemes": {
+            "int8_tensor": 7.234524673549458e-06,
+            "int8_channel": 6.323616617009975e-07,
+            "int4_tensor": 0.0037808448541909456,
+            "int4_channel": 0.000495009240694344
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 3.566720485687256,
+          "schemes": {
+            "int8_tensor": 6.218187991180457e-07,
+            "int8_channel": 6.218187991180457e-07,
+            "int4_tensor": 0.0009662110824137926,
+            "int4_channel": 0.0009662110824137926
+          }
+        }
+      }
+    },
+    "zoo_seed16_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.002776256777704268,
+          "entropy": 0.857136069072411,
+          "drange": 3.2608706951141357,
+          "schemes": {
+            "int8_tensor": 0.00023828347912058234,
+            "int8_channel": 6.0393176681827754e-05,
+            "int4_tensor": 0.060043103992938995,
+            "int4_channel": 0.04702337831258774
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.0010970875585158315,
+          "entropy": 0.8025791660078012,
+          "drange": 8.370199203491211,
+          "schemes": {
+            "int8_tensor": 0.00016600725939497352,
+            "int8_channel": 4.562879621516913e-05,
+            "int4_tensor": 0.07449288666248322,
+            "int4_channel": 0.01857074722647667
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0030810380053448005,
+          "entropy": 0.44240440131546466,
+          "drange": 7.328556060791016,
+          "schemes": {
+            "int8_tensor": 1.3556630619859789e-05,
+            "int8_channel": 1.7930547983269207e-05,
+            "int4_tensor": 0.009314368478953838,
+            "int4_channel": 0.0031337211839854717
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.5416452884674072,
+          "schemes": {
+            "int8_tensor": 1.2753463352055405e-06,
+            "int8_channel": 1.2753463352055405e-06,
+            "int4_tensor": 0.007651741150766611,
+            "int4_channel": 0.007651741150766611
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.002177788391675042,
+          "entropy": 0.843139819524373,
+          "drange": 5.3199238777160645,
+          "schemes": {
+            "int8_tensor": 1.1032630453655656e-07,
+            "int8_channel": 1.1311769299027219e-07,
+            "int4_tensor": 0.0006083056796342134,
+            "int4_channel": 0.00024013861548155546
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.7834537029266357,
+          "schemes": {
+            "int8_tensor": 1.623206031808877e-07,
+            "int8_channel": 1.623206031808877e-07,
+            "int4_tensor": 0.0001525654661236331,
+            "int4_channel": 0.0001525654661236331
+          }
+        }
+      }
+    },
+    "zoo_seed1_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.0401416636703541,
+          "entropy": 0.8579628898494599,
+          "drange": 2.884477138519287,
+          "schemes": {
+            "int8_tensor": 0.00019555987091735005,
+            "int8_channel": 7.046641258057207e-05,
+            "int4_tensor": 0.03774365410208702,
+            "int4_channel": 0.04196641221642494
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.001314548708618732,
+          "entropy": 0.8017839364498309,
+          "drange": 6.832770347595215,
+          "schemes": {
+            "int8_tensor": 8.575882384320721e-05,
+            "int8_channel": 3.200616265530698e-05,
+            "int4_tensor": 0.049322377890348434,
+            "int4_channel": 0.012778074480593204
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0022407381389974454,
+          "entropy": 0.386695016783853,
+          "drange": 8.817182540893555,
+          "schemes": {
+            "int8_tensor": 1.5390905900858343e-05,
+            "int8_channel": 7.42757902116864e-06,
+            "int4_tensor": 0.005612488370388746,
+            "int4_channel": 0.002435502363368869
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.2469842433929443,
+          "schemes": {
+            "int8_tensor": 9.206041795550846e-07,
+            "int8_channel": 9.206041795550846e-07,
+            "int4_tensor": 0.0004383292980492115,
+            "int4_channel": 0.0004383292980492115
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0027711682317137698,
+          "entropy": 0.7697055090753313,
+          "drange": 4.865217208862305,
+          "schemes": {
+            "int8_tensor": 5.520932518265909e-06,
+            "int8_channel": 5.0577931176576385e-08,
+            "int4_tensor": 0.001107546966522932,
+            "int4_channel": 0.00035467417910695076
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.4012091159820557,
+          "schemes": {
+            "int8_tensor": 4.044531124236528e-06,
+            "int8_channel": 4.044531124236528e-06,
+            "int4_tensor": 0.0001722189917927608,
+            "int4_channel": 0.0001722189917927608
+          }
+        }
+      }
+    },
+    "zoo_seed2_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.021899273077392877,
+          "entropy": 0.862383553173994,
+          "drange": 2.972205400466919,
+          "schemes": {
+            "int8_tensor": 0.00027971534291282296,
+            "int8_channel": 0.00011340446508256719,
+            "int4_tensor": 0.04272565618157387,
+            "int4_channel": 0.030958805233240128
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.0028306048232724303,
+          "entropy": 0.8148325991609298,
+          "drange": 6.440459251403809,
+          "schemes": {
+            "int8_tensor": 7.239966362249106e-05,
+            "int8_channel": 3.496270437608473e-05,
+            "int4_tensor": 0.02409800887107849,
+            "int4_channel": 0.009760100394487381
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0023228677991017845,
+          "entropy": 0.41555949649406987,
+          "drange": 5.679767608642578,
+          "schemes": {
+            "int8_tensor": 1.40037072924315e-05,
+            "int8_channel": 8.649109986436088e-06,
+            "int4_tensor": 0.0015919144498184323,
+            "int4_channel": 0.001490107737481594
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.5703272819519043,
+          "schemes": {
+            "int8_tensor": 6.816304448875599e-06,
+            "int8_channel": 6.816304448875599e-06,
+            "int4_tensor": 0.0034089956898242235,
+            "int4_channel": 0.0034089956898242235
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0023831115066379033,
+          "entropy": 0.7536540762479111,
+          "drange": 5.5153398513793945,
+          "schemes": {
+            "int8_tensor": 8.221462053370487e-07,
+            "int8_channel": 1.1353331501595676e-06,
+            "int4_tensor": 0.003755508689209819,
+            "int4_channel": 0.0008271439000964165
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.6541059017181396,
+          "schemes": {
+            "int8_tensor": 1.1887461823789636e-06,
+            "int8_channel": 1.1887461823789636e-06,
+            "int4_tensor": 0.001910391845740378,
+            "int4_channel": 0.001910391845740378
+          }
+        }
+      }
+    },
+    "zoo_seed3_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.02495402613028836,
+          "entropy": 0.8429967364405018,
+          "drange": 3.5099167823791504,
+          "schemes": {
+            "int8_tensor": 0.00015847406757529825,
+            "int8_channel": 9.749719174578786e-05,
+            "int4_tensor": 0.059025589376688004,
+            "int4_channel": 0.0164133720099926
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.0029538185919286515,
+          "entropy": 0.7326913715518701,
+          "drange": 6.625617980957031,
+          "schemes": {
+            "int8_tensor": 5.521446655620821e-05,
+            "int8_channel": 2.5051747797988355e-05,
+            "int4_tensor": 0.024995839223265648,
+            "int4_channel": 0.012404210865497589
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.002366323550374612,
+          "entropy": 0.5437296586771051,
+          "drange": 9.70797348022461,
+          "schemes": {
+            "int8_tensor": 2.430242602713406e-05,
+            "int8_channel": 6.104594376665773e-06,
+            "int4_tensor": 0.006675617303699255,
+            "int4_channel": 0.0014493020717054605
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.6853690147399902,
+          "schemes": {
+            "int8_tensor": 2.0282617697375827e-05,
+            "int8_channel": 2.0282617697375827e-05,
+            "int4_tensor": 0.004197394009679556,
+            "int4_channel": 0.004197394009679556
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.004111062694309421,
+          "entropy": 0.8451835603600001,
+          "drange": 5.284759044647217,
+          "schemes": {
+            "int8_tensor": 1.979267835849896e-06,
+            "int8_channel": 2.2429286161695927e-07,
+            "int4_tensor": 0.0011528971372172236,
+            "int4_channel": 9.245068213203922e-05
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 3.1066062450408936,
+          "schemes": {
+            "int8_tensor": 1.8248375681650941e-06,
+            "int8_channel": 1.8248375681650941e-06,
+            "int4_tensor": 0.0005646342178806663,
+            "int4_channel": 0.0005646342178806663
+          }
+        }
+      }
+    },
+    "zoo_seed4_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.009106165577863192,
+          "entropy": 0.8491073202056735,
+          "drange": 3.45975923538208,
+          "schemes": {
+            "int8_tensor": 0.0002194937551394105,
+            "int8_channel": 7.830990944057703e-05,
+            "int4_tensor": 0.05040402337908745,
+            "int4_channel": 0.028424471616744995
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.005304797157345929,
+          "entropy": 0.7700503269375627,
+          "drange": 6.051443099975586,
+          "schemes": {
+            "int8_tensor": 2.4215918529080227e-05,
+            "int8_channel": 2.091406895488035e-05,
+            "int4_tensor": 0.027026887983083725,
+            "int4_channel": 0.0077644819393754005
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.00039862489328694564,
+          "entropy": 0.4700196432807303,
+          "drange": 6.72963809967041,
+          "schemes": {
+            "int8_tensor": 6.063095952413278e-06,
+            "int8_channel": 2.9853279102098895e-06,
+            "int4_tensor": 0.0035728691145777702,
+            "int4_channel": 0.0008891181787475944
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.498044013977051,
+          "schemes": {
+            "int8_tensor": 4.595190603140509e-06,
+            "int8_channel": 4.595190603140509e-06,
+            "int4_tensor": 0.002824106952175498,
+            "int4_channel": 0.002824106952175498
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.001911665148267851,
+          "entropy": 0.7311322672817372,
+          "drange": 7.467911243438721,
+          "schemes": {
+            "int8_tensor": 2.935611291832174e-06,
+            "int8_channel": 1.950081696122652e-06,
+            "int4_tensor": 0.006950973533093929,
+            "int4_channel": 0.0011460563400760293
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.6445562839508057,
+          "schemes": {
+            "int8_tensor": 1.0819070666912012e-05,
+            "int8_channel": 1.0819070666912012e-05,
+            "int4_tensor": 0.00017833153833635151,
+            "int4_channel": 0.00017833153833635151
+          }
+        }
+      }
+    },
+    "zoo_seed5_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.03100388277310058,
+          "entropy": 0.8466384902151673,
+          "drange": 3.334076166152954,
+          "schemes": {
+            "int8_tensor": 0.00016830669483169913,
+            "int8_channel": 8.603170135756955e-05,
+            "int4_tensor": 0.08357160538434982,
+            "int4_channel": 0.031680721789598465
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.0031175614842570876,
+          "entropy": 0.7695203830441536,
+          "drange": 6.300806045532227,
+          "schemes": {
+            "int8_tensor": 8.49495263537392e-05,
+            "int8_channel": 3.445318361627869e-05,
+            "int4_tensor": 0.030252641066908836,
+            "int4_channel": 0.010855207219719887
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0011192292823217801,
+          "entropy": 0.45856150128217354,
+          "drange": 6.725271224975586,
+          "schemes": {
+            "int8_tensor": 1.620022339920979e-05,
+            "int8_channel": 4.3674531298165675e-06,
+            "int4_tensor": 0.0031655740458518267,
+            "int4_channel": 0.004265218507498503
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.3545336723327637,
+          "schemes": {
+            "int8_tensor": 2.5860839741653763e-05,
+            "int8_channel": 2.5860839741653763e-05,
+            "int4_tensor": 0.004727162886410952,
+            "int4_channel": 0.004727162886410952
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0026624430121302443,
+          "entropy": 0.801024538077513,
+          "drange": 5.41318416595459,
+          "schemes": {
+            "int8_tensor": 2.9427337722154334e-06,
+            "int8_channel": 5.910137801379278e-08,
+            "int4_tensor": 0.004393864888697863,
+            "int4_channel": 0.0002607942733447999
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.8019144535064697,
+          "schemes": {
+            "int8_tensor": 1.2898007298645098e-05,
+            "int8_channel": 1.2898007298645098e-05,
+            "int4_tensor": 0.0005273480783216655,
+            "int4_channel": 0.0005273480783216655
+          }
+        }
+      }
+    },
+    "zoo_seed6_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.016751353738840593,
+          "entropy": 0.8611489301714547,
+          "drange": 2.8348636627197266,
+          "schemes": {
+            "int8_tensor": 0.00011651908425847068,
+            "int8_channel": 8.381970837945119e-05,
+            "int4_tensor": 0.047706492245197296,
+            "int4_channel": 0.023651277646422386
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.002406319337387441,
+          "entropy": 0.8080881088766753,
+          "drange": 6.984188556671143,
+          "schemes": {
+            "int8_tensor": 0.0001089495635824278,
+            "int8_channel": 3.4389358916087076e-05,
+            "int4_tensor": 0.024740198627114296,
+            "int4_channel": 0.005730044096708298
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0021295739673334356,
+          "entropy": 0.4826747691717618,
+          "drange": 7.613832473754883,
+          "schemes": {
+            "int8_tensor": 7.837938028387725e-06,
+            "int8_channel": 7.884354090492707e-06,
+            "int4_tensor": 0.00404013367369771,
+            "int4_channel": 0.0014056271174922585
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.249703884124756,
+          "schemes": {
+            "int8_tensor": 1.5022883417259436e-06,
+            "int8_channel": 1.5022883417259436e-06,
+            "int4_tensor": 0.0017998318653553724,
+            "int4_channel": 0.0017998318653553724
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0008585354544351325,
+          "entropy": 0.7257846158804878,
+          "drange": 5.84909200668335,
+          "schemes": {
+            "int8_tensor": 4.386060936667491e-06,
+            "int8_channel": 7.868667921684391e-07,
+            "int4_tensor": 0.0009620424243621528,
+            "int4_channel": 0.0004539166111499071
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.414097309112549,
+          "schemes": {
+            "int8_tensor": 4.0092136259772815e-06,
+            "int8_channel": 4.0092136259772815e-06,
+            "int4_tensor": 0.0006654548924416304,
+            "int4_channel": 0.0006654548924416304
+          }
+        }
+      }
+    },
+    "zoo_seed7_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.01381367335648901,
+          "entropy": 0.8547676623172118,
+          "drange": 2.8902461528778076,
+          "schemes": {
+            "int8_tensor": 0.00015968784282449633,
+            "int8_channel": 0.00014444660337176174,
+            "int4_tensor": 0.05383888632059097,
+            "int4_channel": 0.024418525397777557
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.002513437759034703,
+          "entropy": 0.793558932613404,
+          "drange": 7.543522834777832,
+          "schemes": {
+            "int8_tensor": 7.929377898108214e-05,
+            "int8_channel": 4.3088151869596913e-05,
+            "int4_tensor": 0.030432624742388725,
+            "int4_channel": 0.006203317549079657
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.0014370192795801694,
+          "entropy": 0.4481421249712192,
+          "drange": 8.06381893157959,
+          "schemes": {
+            "int8_tensor": 1.4302972886071075e-05,
+            "int8_channel": 3.993578957306454e-06,
+            "int4_tensor": 0.007474204059690237,
+            "int4_channel": 0.0015471114311367273
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 1.782987117767334,
+          "schemes": {
+            "int8_tensor": 7.437968179146992e-07,
+            "int8_channel": 7.437968179146992e-07,
+            "int4_tensor": 0.00042398725054226816,
+            "int4_channel": 0.00042398725054226816
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.004392159392608669,
+          "entropy": 0.7534895424595714,
+          "drange": 8.48499870300293,
+          "schemes": {
+            "int8_tensor": 2.4006976673263125e-06,
+            "int8_channel": 5.487633188749896e-06,
+            "int4_tensor": 0.0056758783757686615,
+            "int4_channel": 0.0002866622235160321
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 4.305651664733887,
+          "schemes": {
+            "int8_tensor": 1.2023591580145876e-06,
+            "int8_channel": 1.2023591580145876e-06,
+            "int4_tensor": 0.0013595829950645566,
+            "int4_channel": 0.0013595829950645566
+          }
+        }
+      }
+    },
+    "zoo_seed8_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.03031140169835414,
+          "entropy": 0.8550372852744874,
+          "drange": 3.467846155166626,
+          "schemes": {
+            "int8_tensor": 0.00018833598005585372,
+            "int8_channel": 8.33870071801357e-05,
+            "int4_tensor": 0.028608141466975212,
+            "int4_channel": 0.03875170275568962
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.003590915488649025,
+          "entropy": 0.7707249167521705,
+          "drange": 6.316183567047119,
+          "schemes": {
+            "int8_tensor": 4.533332321443595e-05,
+            "int8_channel": 2.2791102310293354e-05,
+            "int4_tensor": 0.0224781334400177,
+            "int4_channel": 0.006518092937767506
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.002813477679526272,
+          "entropy": 0.460808652718737,
+          "drange": 8.09013843536377,
+          "schemes": {
+            "int8_tensor": 1.696388608252164e-05,
+            "int8_channel": 4.83531675854465e-06,
+            "int4_tensor": 0.003947587683796883,
+            "int4_channel": 0.003011849243193865
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.3168962001800537,
+          "schemes": {
+            "int8_tensor": 1.473968950449489e-06,
+            "int8_channel": 1.473968950449489e-06,
+            "int4_tensor": 0.0013324815081432462,
+            "int4_channel": 0.0013324815081432462
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.002040591250143609,
+          "entropy": 0.891269691465692,
+          "drange": 4.236597061157227,
+          "schemes": {
+            "int8_tensor": 2.0334291548351757e-06,
+            "int8_channel": 1.4991640284733876e-07,
+            "int4_tensor": 0.00010894393926719204,
+            "int4_channel": 2.9441722290357575e-05
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 3.212190628051758,
+          "schemes": {
+            "int8_tensor": 4.064414497406688e-06,
+            "int8_channel": 4.064414497406688e-06,
+            "int4_tensor": 0.0008167867781594396,
+            "int4_channel": 0.0008167867781594396
+          }
+        }
+      }
+    },
+    "zoo_seed9_best": {
+      "layers": {
+        "conv1.weight": {
+          "min_rel_gap": 0.008888622812247175,
+          "entropy": 0.8562828532641291,
+          "drange": 3.3696372509002686,
+          "schemes": {
+            "int8_tensor": 8.138452540151775e-05,
+            "int8_channel": 7.28005325072445e-05,
+            "int4_tensor": 0.038091015070676804,
+            "int4_channel": 0.027222098782658577
+          }
+        },
+        "conv2.weight": {
+          "min_rel_gap": 0.0013531616240362364,
+          "entropy": 0.8071864429288843,
+          "drange": 6.892480850219727,
+          "schemes": {
+            "int8_tensor": 8.338648331118748e-05,
+            "int8_channel": 2.606185807962902e-05,
+            "int4_tensor": 0.01706533320248127,
+            "int4_channel": 0.0057052383199334145
+          }
+        },
+        "conv3.weight": {
+          "min_rel_gap": 0.00262045969898839,
+          "entropy": 0.5141936426006317,
+          "drange": 7.2047648429870605,
+          "schemes": {
+            "int8_tensor": 5.68186351301847e-06,
+            "int8_channel": 9.436783329874743e-06,
+            "int4_tensor": 0.006597529631108046,
+            "int4_channel": 0.002157566137611866
+          }
+        },
+        "advantage_conv.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 2.742507219314575,
+          "schemes": {
+            "int8_tensor": 3.0653343856101856e-05,
+            "int8_channel": 3.0653343856101856e-05,
+            "int4_tensor": 0.0010368407238274813,
+            "int4_channel": 0.0010368407238274813
+          }
+        },
+        "value_fc1.weight": {
+          "min_rel_gap": 0.0012281115571879948,
+          "entropy": 0.8822149505737468,
+          "drange": 4.965680122375488,
+          "schemes": {
+            "int8_tensor": 3.03046363114845e-07,
+            "int8_channel": 3.0148302698762564e-07,
+            "int4_tensor": 0.00066375796450302,
+            "int4_channel": 0.00021461313008330762
+          }
+        },
+        "value_fc2.weight": {
+          "min_rel_gap": NaN,
+          "entropy": 0.0,
+          "drange": 3.3175852298736572,
+          "schemes": {
+            "int8_tensor": 1.822541662477306e-06,
+            "int8_channel": 1.822541662477306e-06,
+            "int4_tensor": 0.0002518146939110011,
+            "int4_channel": 0.0002518146939110011
+          }
+        }
+      }
+    }
+  }
+}

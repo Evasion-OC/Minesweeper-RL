@@ -16,6 +16,7 @@ __pycache__/
 !best_model_batch5_20260507_125548.pt
 checkpoints/
 results/*
+!results/*.json
 !results/wsl_barriers.png
 !results/wsl_spectra.png
 !results/ablation.csv

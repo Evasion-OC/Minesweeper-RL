@@ -1,0 +1,1096 @@
+{
+  "instances": [
+    {
+      "instance": 0,
+      "objectives": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 1,
+      "objectives": [
+        0.0,
+        0.0,
+        158.22316620498896,
+        158.22316620498896,
+        158.22316620498896,
+        158.22316620498896,
+        158.22316620498896,
+        0.0,
+        158.22316620498896,
+        158.22316620498896
+      ],
+      "recovered": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 2,
+      "objectives": [
+        0.0,
+        0.0,
+        160.17207595705986,
+        160.17207595705986,
+        160.17207595705986,
+        160.17207595705986,
+        160.17207595705986,
+        0.0,
+        160.17207595705986,
+        160.17207595705986
+      ],
+      "recovered": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 3,
+      "objectives": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 4,
+      "objectives": [
+        158.07458250969648,
+        0.0,
+        159.28525279462337,
+        159.28525279462337,
+        159.28525279462337,
+        159.28525279462337,
+        159.28525279462337,
+        158.07458250969648,
+        159.28525279462337,
+        159.28525279462337
+      ],
+      "recovered": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 5,
+      "objectives": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 6,
+      "objectives": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 7,
+      "objectives": [
+        157.81192842498422,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        157.81192842498422,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 8,
+      "objectives": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 9,
+      "objectives": [
+        158.05757263302803,
+        0.0,
+        159.59556889533997,
+        159.59556889533997,
+        159.59556889533997,
+        159.59556889533997,
+        159.59556889533997,
+        158.05757263302803,
+        159.59556889533997,
+        159.59556889533997
+      ],
+      "recovered": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 10,
+      "objectives": [
+        160.32481855154037,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        160.32481855154037,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 11,
+      "objectives": [
+        158.95601493120193,
+        0.0,
+        159.55989854037762,
+        159.55989854037762,
+        159.55989854037762,
+        159.55989854037762,
+        159.55989854037762,
+        158.95601493120193,
+        159.55989854037762,
+        159.55989854037762
+      ],
+      "recovered": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 12,
+      "objectives": [
+        157.43809265643358,
+        0.0,
+        159.8763205036521,
+        159.8763205036521,
+        159.8763205036521,
+        159.8763205036521,
+        159.8763205036521,
+        157.43809265643358,
+        159.8763205036521,
+        159.8763205036521
+      ],
+      "recovered": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 13,
+      "objectives": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 14,
+      "objectives": [
+        158.61734076589346,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        158.61734076589346,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 15,
+      "objectives": [
+        159.31574953347445,
+        0.0,
+        159.8126300536096,
+        159.8126300536096,
+        159.8126300536096,
+        159.8126300536096,
+        159.8126300536096,
+        159.31574953347445,
+        159.8126300536096,
+        159.8126300536096
+      ],
+      "recovered": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 16,
+      "objectives": [
+        160.3029902651906,
+        0.0,
+        158.4625148549676,
+        158.4625148549676,
+        158.4625148549676,
+        158.4625148549676,
+        158.4625148549676,
+        160.3029902651906,
+        158.4625148549676,
+        158.4625148549676
+      ],
+      "recovered": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 17,
+      "objectives": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 18,
+      "objectives": [
+        159.31889217346907,
+        0.0,
+        158.7917063087225,
+        158.7917063087225,
+        158.7917063087225,
+        158.7917063087225,
+        158.7917063087225,
+        159.31889217346907,
+        158.7917063087225,
+        158.7917063087225
+      ],
+      "recovered": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 19,
+      "objectives": [
+        0.0,
+        0.0,
+        160.31129796802998,
+        160.31129796802998,
+        160.31129796802998,
+        160.31129796802998,
+        160.31129796802998,
+        0.0,
+        160.31129796802998,
+        160.31129796802998
+      ],
+      "recovered": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 20,
+      "objectives": [
+        158.8246426358819,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        158.8246426358819,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 21,
+      "objectives": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 22,
+      "objectives": [
+        0.0,
+        0.0,
+        159.88228495046496,
+        159.88228495046496,
+        159.88228495046496,
+        159.88228495046496,
+        159.88228495046496,
+        0.0,
+        159.88228495046496,
+        159.88228495046496
+      ],
+      "recovered": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 23,
+      "objectives": [
+        159.424695789814,
+        0.0,
+        159.99457105249166,
+        159.99457105249166,
+        159.99457105249166,
+        159.99457105249166,
+        159.99457105249166,
+        159.424695789814,
+        159.99457105249166,
+        159.99457105249166
+      ],
+      "recovered": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 24,
+      "objectives": [
+        157.1739105656743,
+        0.0,
+        159.46591305732727,
+        159.46591305732727,
+        159.46591305732727,
+        159.46591305732727,
+        159.46591305732727,
+        157.1739105656743,
+        159.46591305732727,
+        159.46591305732727
+      ],
+      "recovered": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 25,
+      "objectives": [
+        158.92988976091146,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        158.92988976091146,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 26,
+      "objectives": [
+        158.53754987567663,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        158.53754987567663,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 27,
+      "objectives": [
+        155.35591614246368,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        155.35591614246368,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 28,
+      "objectives": [
+        159.37050906196237,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        159.37050906196237,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 29,
+      "objectives": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 30,
+      "objectives": [
+        0.0,
+        0.0,
+        159.59968468546867,
+        159.59968468546867,
+        159.59968468546867,
+        159.59968468546867,
+        159.59968468546867,
+        0.0,
+        159.59968468546867,
+        159.59968468546867
+      ],
+      "recovered": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 31,
+      "objectives": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 32,
+      "objectives": [
+        158.59509848058224,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        158.59509848058224,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 33,
+      "objectives": [
+        0.0,
+        0.0,
+        159.36856138706207,
+        159.36856138706207,
+        159.36856138706207,
+        159.36856138706207,
+        159.36856138706207,
+        0.0,
+        159.36856138706207,
+        159.36856138706207
+      ],
+      "recovered": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 34,
+      "objectives": [
+        157.56902196258307,
+        0.0,
+        157.246570199728,
+        157.246570199728,
+        157.246570199728,
+        157.246570199728,
+        157.246570199728,
+        157.56902196258307,
+        157.246570199728,
+        157.246570199728
+      ],
+      "recovered": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 35,
+      "objectives": [
+        158.66288604587317,
+        0.0,
+        160.63323194533587,
+        160.63323194533587,
+        160.63323194533587,
+        160.63323194533587,
+        160.63323194533587,
+        158.66288604587317,
+        160.63323194533587,
+        160.63323194533587
+      ],
+      "recovered": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 36,
+      "objectives": [
+        159.57104578614235,
+        0.0,
+        160.67213904857635,
+        160.67213904857635,
+        160.67213904857635,
+        160.67213904857635,
+        160.67213904857635,
+        159.57104578614235,
+        160.67213904857635,
+        160.67213904857635
+      ],
+      "recovered": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 37,
+      "objectives": [
+        157.6647832840681,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        157.6647832840681,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "instance": 38,
+      "objectives": [
+        159.08750078827143,
+        0.0,
+        159.87079332768917,
+        159.87079332768917,
+        159.87079332768917,
+        159.87079332768917,
+        159.87079332768917,
+        159.08750078827143,
+        159.87079332768917,
+        159.87079332768917
+      ],
+      "recovered": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "instance": 39,
+      "objectives": [
+        158.09874089807272,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        158.09874089807272,
+        0.0,
+        0.0
+      ],
+      "recovered": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ]
+    }
+  ],
+  "cumulative_recovery": [
+    0.4,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ]
+}

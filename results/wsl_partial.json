@@ -1,0 +1,3647 @@
+[
+  {
+    "pair": "zoo_seed10_best vs zoo_seed11_best",
+    "endpoints": [
+      0.095,
+      0.095
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.095,
+          0.065,
+          0.04,
+          0.045,
+          0.095
+        ],
+        "barrier": {
+          "barrier": 0.055,
+          "rel_barrier": 0.5789473684210527,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.095
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.095,
+          0.065,
+          0.04,
+          0.045,
+          0.095
+        ],
+        "barrier": {
+          "barrier": 0.055,
+          "rel_barrier": 0.5789473684210527,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.095
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.095,
+          0.005,
+          0.015,
+          0.02,
+          0.095
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.9473684210526315,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.095,
+            0.095
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.095,
+          0.015,
+          0.01,
+          0.04,
+          0.095
+        ],
+        "barrier": {
+          "barrier": 0.085,
+          "rel_barrier": 0.8947368421052632,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.095
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed10_best vs zoo_seed12_best",
+    "endpoints": [
+      0.095,
+      0.12
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.095,
+          0.05,
+          0.025,
+          0.02,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.09999999999999999,
+          "rel_barrier": 0.8333333333333333,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.095,
+            0.12
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.095,
+          0.05,
+          0.025,
+          0.02,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.09999999999999999,
+          "rel_barrier": 0.8333333333333333,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.095,
+            0.12
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.095,
+          0.02,
+          0.0,
+          0.05,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.12,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.12
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.095,
+          0.1,
+          0.08,
+          0.06,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.06,
+          "rel_barrier": 0.5,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.095,
+            0.12
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed10_best vs zoo_seed13_best",
+    "endpoints": [
+      0.095,
+      0.145
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.095,
+          0.05,
+          0.025,
+          0.05,
+          0.145
+        ],
+        "barrier": {
+          "barrier": 0.12,
+          "rel_barrier": 0.8275862068965517,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.145
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.095,
+          0.05,
+          0.025,
+          0.05,
+          0.145
+        ],
+        "barrier": {
+          "barrier": 0.12,
+          "rel_barrier": 0.8275862068965517,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.145
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.095,
+          0.025,
+          0.005,
+          0.035,
+          0.145
+        ],
+        "barrier": {
+          "barrier": 0.13999999999999999,
+          "rel_barrier": 0.9655172413793103,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.145
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.095,
+          0.045,
+          0.02,
+          0.04,
+          0.145
+        ],
+        "barrier": {
+          "barrier": 0.12499999999999999,
+          "rel_barrier": 0.8620689655172413,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.145
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed10_best vs zoo_seed14_best",
+    "endpoints": [
+      0.095,
+      0.035
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.095,
+          0.035,
+          0.03,
+          0.075,
+          0.035
+        ],
+        "barrier": {
+          "barrier": 0.065,
+          "rel_barrier": 0.6842105263157895,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.035
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.095,
+          0.035,
+          0.03,
+          0.075,
+          0.035
+        ],
+        "barrier": {
+          "barrier": 0.065,
+          "rel_barrier": 0.6842105263157895,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.035
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.095,
+          0.035,
+          0.005,
+          0.03,
+          0.035
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.9473684210526315,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.035
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.095,
+          0.035,
+          0.015,
+          0.095,
+          0.035
+        ],
+        "barrier": {
+          "barrier": 0.08,
+          "rel_barrier": 0.8421052631578947,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.035
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed10_best vs zoo_seed15_best",
+    "endpoints": [
+      0.095,
+      0.1
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.095,
+          0.07,
+          0.025,
+          0.03,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.07500000000000001,
+          "rel_barrier": 0.7500000000000001,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.1
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.095,
+          0.07,
+          0.025,
+          0.03,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.07500000000000001,
+          "rel_barrier": 0.7500000000000001,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.1
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.095,
+          0.045,
+          0.015,
+          0.035,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.085,
+          "rel_barrier": 0.85,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.1
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.095,
+          0.04,
+          0.03,
+          0.045,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.07,
+          "rel_barrier": 0.7000000000000001,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.1
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed10_best vs zoo_seed16_best",
+    "endpoints": [
+      0.095,
+      0.12
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.095,
+          0.025,
+          0.04,
+          0.025,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.095,
+          "rel_barrier": 0.7916666666666667,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.095,
+            0.12
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.095,
+          0.025,
+          0.04,
+          0.025,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.095,
+          "rel_barrier": 0.7916666666666667,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.095,
+            0.12
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.095,
+          0.045,
+          0.01,
+          0.07,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.11,
+          "rel_barrier": 0.9166666666666667,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.12
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.095,
+          0.06,
+          0.035,
+          0.055,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.08499999999999999,
+          "rel_barrier": 0.7083333333333333,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.12
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed10_best vs zoo_seed7_best",
+    "endpoints": [
+      0.095,
+      0.105
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.095,
+          0.04,
+          0.0,
+          0.01,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.105,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.105
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.095,
+          0.04,
+          0.0,
+          0.01,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.105,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.105
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.095,
+          0.01,
+          0.0,
+          0.02,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.105,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.105
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.095,
+          0.005,
+          0.0,
+          0.0,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.105,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.105
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed10_best vs zoo_seed8_best",
+    "endpoints": [
+      0.095,
+      0.055
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.095,
+          0.035,
+          0.035,
+          0.09,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.06,
+          "rel_barrier": 0.631578947368421,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.095,
+            0.055
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.095,
+          0.035,
+          0.035,
+          0.09,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.06,
+          "rel_barrier": 0.631578947368421,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.095,
+            0.055
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.095,
+          0.04,
+          0.005,
+          0.025,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.9473684210526315,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.055
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.095,
+          0.075,
+          0.02,
+          0.04,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.075,
+          "rel_barrier": 0.7894736842105263,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.055
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed10_best vs zoo_seed9_best",
+    "endpoints": [
+      0.095,
+      0.165
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.095,
+          0.11,
+          0.03,
+          0.055,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.135,
+          "rel_barrier": 0.8181818181818182,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.165
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.095,
+          0.11,
+          0.03,
+          0.055,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.135,
+          "rel_barrier": 0.8181818181818182,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.165
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.095,
+          0.02,
+          0.0,
+          0.025,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.165,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.165
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.095,
+          0.06,
+          0.04,
+          0.06,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.125,
+          "rel_barrier": 0.7575757575757576,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.165
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed11_best vs zoo_seed12_best",
+    "endpoints": [
+      0.095,
+      0.12
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.095,
+          0.06,
+          0.045,
+          0.05,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.075,
+          "rel_barrier": 0.625,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.12
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.095,
+          0.06,
+          0.045,
+          0.05,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.075,
+          "rel_barrier": 0.625,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.12
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.095,
+          0.015,
+          0.005,
+          0.005,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.11499999999999999,
+          "rel_barrier": 0.9583333333333333,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.12
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.095,
+          0.085,
+          0.035,
+          0.035,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.08499999999999999,
+          "rel_barrier": 0.7083333333333333,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.12
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed11_best vs zoo_seed13_best",
+    "endpoints": [
+      0.095,
+      0.145
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.095,
+          0.025,
+          0.015,
+          0.025,
+          0.145
+        ],
+        "barrier": {
+          "barrier": 0.13,
+          "rel_barrier": 0.8965517241379312,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.145
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.095,
+          0.025,
+          0.015,
+          0.025,
+          0.145
+        ],
+        "barrier": {
+          "barrier": 0.13,
+          "rel_barrier": 0.8965517241379312,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.145
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.095,
+          0.04,
+          0.005,
+          0.02,
+          0.145
+        ],
+        "barrier": {
+          "barrier": 0.13999999999999999,
+          "rel_barrier": 0.9655172413793103,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.145
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.095,
+          0.025,
+          0.015,
+          0.025,
+          0.145
+        ],
+        "barrier": {
+          "barrier": 0.13,
+          "rel_barrier": 0.8965517241379312,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.145
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed11_best vs zoo_seed14_best",
+    "endpoints": [
+      0.095,
+      0.035
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.095,
+          0.045,
+          0.005,
+          0.04,
+          0.035
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.9473684210526315,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.035
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.095,
+          0.045,
+          0.005,
+          0.04,
+          0.035
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.9473684210526315,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.035
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.095,
+          0.025,
+          0.0,
+          0.015,
+          0.035
+        ],
+        "barrier": {
+          "barrier": 0.095,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.035
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.095,
+          0.045,
+          0.005,
+          0.04,
+          0.035
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.9473684210526315,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.035
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed11_best vs zoo_seed15_best",
+    "endpoints": [
+      0.095,
+      0.1
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.095,
+          0.045,
+          0.025,
+          0.03,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.07500000000000001,
+          "rel_barrier": 0.7500000000000001,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.1
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.095,
+          0.045,
+          0.025,
+          0.03,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.07500000000000001,
+          "rel_barrier": 0.7500000000000001,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.1
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.095,
+          0.025,
+          0.0,
+          0.005,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.1,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.1
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.095,
+          0.07,
+          0.045,
+          0.06,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.05500000000000001,
+          "rel_barrier": 0.55,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.1
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed11_best vs zoo_seed16_best",
+    "endpoints": [
+      0.095,
+      0.12
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.095,
+          0.045,
+          0.015,
+          0.03,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.105,
+          "rel_barrier": 0.875,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.12
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.095,
+          0.045,
+          0.015,
+          0.03,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.105,
+          "rel_barrier": 0.875,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.12
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.095,
+          0.02,
+          0.005,
+          0.035,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.11499999999999999,
+          "rel_barrier": 0.9583333333333333,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.12
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.095,
+          0.055,
+          0.035,
+          0.02,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.09999999999999999,
+          "rel_barrier": 0.8333333333333333,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.095,
+            0.12
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed11_best vs zoo_seed7_best",
+    "endpoints": [
+      0.095,
+      0.105
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.095,
+          0.055,
+          0.025,
+          0.04,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.07999999999999999,
+          "rel_barrier": 0.7619047619047619,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.105
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.095,
+          0.055,
+          0.025,
+          0.04,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.07999999999999999,
+          "rel_barrier": 0.7619047619047619,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.105
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.095,
+          0.02,
+          0.0,
+          0.02,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.105,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.105
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.095,
+          0.055,
+          0.03,
+          0.04,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.075,
+          "rel_barrier": 0.7142857142857143,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.105
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed11_best vs zoo_seed8_best",
+    "endpoints": [
+      0.095,
+      0.055
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.095,
+          0.015,
+          0.015,
+          0.075,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.08,
+          "rel_barrier": 0.8421052631578947,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.095,
+            0.055
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.095,
+          0.015,
+          0.015,
+          0.075,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.08,
+          "rel_barrier": 0.8421052631578947,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.095,
+            0.055
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.095,
+          0.025,
+          0.0,
+          0.04,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.095,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.055
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.095,
+          0.03,
+          0.005,
+          0.025,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.9473684210526315,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.055
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed11_best vs zoo_seed9_best",
+    "endpoints": [
+      0.095,
+      0.165
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.095,
+          0.035,
+          0.015,
+          0.065,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.15000000000000002,
+          "rel_barrier": 0.9090909090909092,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.165
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.095,
+          0.035,
+          0.015,
+          0.065,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.15000000000000002,
+          "rel_barrier": 0.9090909090909092,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.165
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.095,
+          0.035,
+          0.0,
+          0.02,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.165,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.165
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.095,
+          0.04,
+          0.025,
+          0.08,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.14,
+          "rel_barrier": 0.8484848484848485,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.095,
+            0.165
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed12_best vs zoo_seed13_best",
+    "endpoints": [
+      0.12,
+      0.145
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.12,
+          0.05,
+          0.04,
+          0.085,
+          0.145
+        ],
+        "barrier": {
+          "barrier": 0.10499999999999998,
+          "rel_barrier": 0.7241379310344827,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.145
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.12,
+          0.05,
+          0.04,
+          0.085,
+          0.145
+        ],
+        "barrier": {
+          "barrier": 0.10499999999999998,
+          "rel_barrier": 0.7241379310344827,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.145
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.12,
+          0.03,
+          0.005,
+          0.035,
+          0.145
+        ],
+        "barrier": {
+          "barrier": 0.13999999999999999,
+          "rel_barrier": 0.9655172413793103,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.145
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.12,
+          0.075,
+          0.04,
+          0.065,
+          0.145
+        ],
+        "barrier": {
+          "barrier": 0.10499999999999998,
+          "rel_barrier": 0.7241379310344827,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.145
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed12_best vs zoo_seed14_best",
+    "endpoints": [
+      0.12,
+      0.035
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.12,
+          0.055,
+          0.025,
+          0.07,
+          0.035
+        ],
+        "barrier": {
+          "barrier": 0.095,
+          "rel_barrier": 0.7916666666666667,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.035
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.12,
+          0.055,
+          0.025,
+          0.07,
+          0.035
+        ],
+        "barrier": {
+          "barrier": 0.095,
+          "rel_barrier": 0.7916666666666667,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.035
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.12,
+          0.015,
+          0.01,
+          0.03,
+          0.035
+        ],
+        "barrier": {
+          "barrier": 0.11,
+          "rel_barrier": 0.9166666666666667,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.035
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.12,
+          0.08,
+          0.035,
+          0.075,
+          0.035
+        ],
+        "barrier": {
+          "barrier": 0.08499999999999999,
+          "rel_barrier": 0.7083333333333333,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.035
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed12_best vs zoo_seed15_best",
+    "endpoints": [
+      0.12,
+      0.1
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.12,
+          0.055,
+          0.015,
+          0.03,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.105,
+          "rel_barrier": 0.875,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.1
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.12,
+          0.055,
+          0.015,
+          0.03,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.105,
+          "rel_barrier": 0.875,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.1
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.12,
+          0.05,
+          0.01,
+          0.015,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.11,
+          "rel_barrier": 0.9166666666666667,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.1
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.12,
+          0.05,
+          0.025,
+          0.015,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.105,
+          "rel_barrier": 0.875,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.12,
+            0.1
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed12_best vs zoo_seed16_best",
+    "endpoints": [
+      0.12,
+      0.12
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.12,
+          0.065,
+          0.025,
+          0.035,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.095,
+          "rel_barrier": 0.7916666666666667,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.12
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.12,
+          0.065,
+          0.025,
+          0.035,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.095,
+          "rel_barrier": 0.7916666666666667,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.12
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.12,
+          0.075,
+          0.005,
+          0.025,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.11499999999999999,
+          "rel_barrier": 0.9583333333333333,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.12
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.12,
+          0.045,
+          0.045,
+          0.03,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.75,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.12,
+            0.12
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed12_best vs zoo_seed7_best",
+    "endpoints": [
+      0.12,
+      0.105
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.12,
+          0.05,
+          0.03,
+          0.045,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.75,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.105
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.12,
+          0.05,
+          0.03,
+          0.045,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.75,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.105
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.12,
+          0.05,
+          0.005,
+          0.015,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.11499999999999999,
+          "rel_barrier": 0.9583333333333333,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.105
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.12,
+          0.055,
+          0.045,
+          0.05,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.075,
+          "rel_barrier": 0.625,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.105
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed12_best vs zoo_seed8_best",
+    "endpoints": [
+      0.12,
+      0.055
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.12,
+          0.065,
+          0.025,
+          0.04,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.095,
+          "rel_barrier": 0.7916666666666667,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.055
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.12,
+          0.065,
+          0.025,
+          0.04,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.095,
+          "rel_barrier": 0.7916666666666667,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.055
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.12,
+          0.04,
+          0.005,
+          0.02,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.11499999999999999,
+          "rel_barrier": 0.9583333333333333,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.055
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.12,
+          0.065,
+          0.025,
+          0.04,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.095,
+          "rel_barrier": 0.7916666666666667,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.055
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed12_best vs zoo_seed9_best",
+    "endpoints": [
+      0.12,
+      0.165
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.12,
+          0.075,
+          0.04,
+          0.045,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.125,
+          "rel_barrier": 0.7575757575757576,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.165
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.12,
+          0.075,
+          0.04,
+          0.045,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.125,
+          "rel_barrier": 0.7575757575757576,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.165
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.12,
+          0.05,
+          0.005,
+          0.03,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.16,
+          "rel_barrier": 0.9696969696969697,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.165
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.12,
+          0.08,
+          0.04,
+          0.055,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.125,
+          "rel_barrier": 0.7575757575757576,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.165
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed13_best vs zoo_seed14_best",
+    "endpoints": [
+      0.145,
+      0.035
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.145,
+          0.045,
+          0.015,
+          0.07,
+          0.035
+        ],
+        "barrier": {
+          "barrier": 0.13,
+          "rel_barrier": 0.8965517241379312,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.145,
+            0.035
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.145,
+          0.045,
+          0.015,
+          0.07,
+          0.035
+        ],
+        "barrier": {
+          "barrier": 0.13,
+          "rel_barrier": 0.8965517241379312,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.145,
+            0.035
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.145,
+          0.005,
+          0.005,
+          0.045,
+          0.035
+        ],
+        "barrier": {
+          "barrier": 0.13999999999999999,
+          "rel_barrier": 0.9655172413793103,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.145,
+            0.035
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.145,
+          0.045,
+          0.015,
+          0.07,
+          0.035
+        ],
+        "barrier": {
+          "barrier": 0.13,
+          "rel_barrier": 0.8965517241379312,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.145,
+            0.035
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed13_best vs zoo_seed15_best",
+    "endpoints": [
+      0.145,
+      0.1
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.145,
+          0.04,
+          0.04,
+          0.04,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.10499999999999998,
+          "rel_barrier": 0.7241379310344827,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.145,
+            0.1
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.145,
+          0.04,
+          0.04,
+          0.04,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.10499999999999998,
+          "rel_barrier": 0.7241379310344827,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.145,
+            0.1
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.145,
+          0.06,
+          0.015,
+          0.03,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.13,
+          "rel_barrier": 0.8965517241379312,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.145,
+            0.1
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.145,
+          0.04,
+          0.04,
+          0.04,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.10499999999999998,
+          "rel_barrier": 0.7241379310344827,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.145,
+            0.1
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed13_best vs zoo_seed16_best",
+    "endpoints": [
+      0.145,
+      0.12
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.145,
+          0.06,
+          0.05,
+          0.05,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.09499999999999999,
+          "rel_barrier": 0.6551724137931034,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.145,
+            0.12
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.145,
+          0.06,
+          0.05,
+          0.05,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.09499999999999999,
+          "rel_barrier": 0.6551724137931034,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.145,
+            0.12
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.145,
+          0.03,
+          0.0,
+          0.0,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.145,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.145,
+            0.12
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.145,
+          0.05,
+          0.035,
+          0.045,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.10999999999999999,
+          "rel_barrier": 0.7586206896551724,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.145,
+            0.12
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed13_best vs zoo_seed7_best",
+    "endpoints": [
+      0.145,
+      0.105
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.145,
+          0.04,
+          0.025,
+          0.04,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.12,
+          "rel_barrier": 0.8275862068965517,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.145,
+            0.105
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.145,
+          0.04,
+          0.025,
+          0.04,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.12,
+          "rel_barrier": 0.8275862068965517,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.145,
+            0.105
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.145,
+          0.025,
+          0.005,
+          0.015,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.13999999999999999,
+          "rel_barrier": 0.9655172413793103,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.145,
+            0.105
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.145,
+          0.04,
+          0.03,
+          0.025,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.12,
+          "rel_barrier": 0.8275862068965517,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.145,
+            0.105
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed13_best vs zoo_seed8_best",
+    "endpoints": [
+      0.145,
+      0.055
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.145,
+          0.07,
+          0.03,
+          0.05,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.11499999999999999,
+          "rel_barrier": 0.7931034482758621,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.145,
+            0.055
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.145,
+          0.07,
+          0.03,
+          0.05,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.11499999999999999,
+          "rel_barrier": 0.7931034482758621,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.145,
+            0.055
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.145,
+          0.025,
+          0.0,
+          0.07,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.145,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.145,
+            0.055
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.145,
+          0.045,
+          0.02,
+          0.055,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.12499999999999999,
+          "rel_barrier": 0.8620689655172413,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.145,
+            0.055
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed13_best vs zoo_seed9_best",
+    "endpoints": [
+      0.145,
+      0.165
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.145,
+          0.045,
+          0.045,
+          0.03,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.135,
+          "rel_barrier": 0.8181818181818182,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.145,
+            0.165
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.145,
+          0.045,
+          0.045,
+          0.03,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.135,
+          "rel_barrier": 0.8181818181818182,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.145,
+            0.165
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.145,
+          0.03,
+          0.0,
+          0.045,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.165,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.145,
+            0.165
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.145,
+          0.005,
+          0.0,
+          0.03,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.165,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.145,
+            0.165
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed14_best vs zoo_seed15_best",
+    "endpoints": [
+      0.035,
+      0.1
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.035,
+          0.065,
+          0.03,
+          0.07,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.07,
+          "rel_barrier": 0.7000000000000001,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.035,
+            0.1
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.035,
+          0.065,
+          0.03,
+          0.07,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.07,
+          "rel_barrier": 0.7000000000000001,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.035,
+            0.1
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.035,
+          0.02,
+          0.0,
+          0.035,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.1,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.035,
+            0.1
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.035,
+          0.035,
+          0.03,
+          0.055,
+          0.1
+        ],
+        "barrier": {
+          "barrier": 0.07,
+          "rel_barrier": 0.7000000000000001,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.035,
+            0.1
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed14_best vs zoo_seed16_best",
+    "endpoints": [
+      0.035,
+      0.12
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.035,
+          0.06,
+          0.065,
+          0.08,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.06,
+          "rel_barrier": 0.5,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.035,
+            0.12
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.035,
+          0.06,
+          0.065,
+          0.08,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.06,
+          "rel_barrier": 0.5,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.035,
+            0.12
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.035,
+          0.065,
+          0.005,
+          0.01,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.11499999999999999,
+          "rel_barrier": 0.9583333333333333,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.035,
+            0.12
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.035,
+          0.04,
+          0.025,
+          0.07,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.095,
+          "rel_barrier": 0.7916666666666667,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.035,
+            0.12
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed14_best vs zoo_seed7_best",
+    "endpoints": [
+      0.035,
+      0.105
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.035,
+          0.06,
+          0.015,
+          0.05,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.8571428571428571,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.035,
+            0.105
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.035,
+          0.06,
+          0.015,
+          0.05,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.8571428571428571,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.035,
+            0.105
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.035,
+          0.065,
+          0.0,
+          0.02,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.105,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.035,
+            0.105
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.035,
+          0.045,
+          0.035,
+          0.02,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.08499999999999999,
+          "rel_barrier": 0.8095238095238095,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.035,
+            0.105
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed14_best vs zoo_seed8_best",
+    "endpoints": [
+      0.035,
+      0.055
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.035,
+          0.085,
+          0.055,
+          0.05,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.0049999999999999975,
+          "rel_barrier": 0.09090909090909087,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.035,
+            0.055
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.035,
+          0.085,
+          0.055,
+          0.05,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.0049999999999999975,
+          "rel_barrier": 0.09090909090909087,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.035,
+            0.055
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.035,
+          0.035,
+          0.0,
+          0.035,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.055,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.035,
+            0.055
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.035,
+          0.08,
+          0.02,
+          0.07,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.035,
+          "rel_barrier": 0.6363636363636365,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.035,
+            0.055
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed14_best vs zoo_seed9_best",
+    "endpoints": [
+      0.035,
+      0.165
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.035,
+          0.045,
+          0.05,
+          0.025,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.14,
+          "rel_barrier": 0.8484848484848485,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.035,
+            0.165
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.035,
+          0.045,
+          0.05,
+          0.025,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.14,
+          "rel_barrier": 0.8484848484848485,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.035,
+            0.165
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.035,
+          0.04,
+          0.015,
+          0.05,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.15000000000000002,
+          "rel_barrier": 0.9090909090909092,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.035,
+            0.165
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.035,
+          0.045,
+          0.015,
+          0.04,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.15000000000000002,
+          "rel_barrier": 0.9090909090909092,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.035,
+            0.165
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed15_best vs zoo_seed16_best",
+    "endpoints": [
+      0.1,
+      0.12
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.1,
+          0.04,
+          0.025,
+          0.065,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.095,
+          "rel_barrier": 0.7916666666666667,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.1,
+            0.12
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.1,
+          0.04,
+          0.025,
+          0.065,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.095,
+          "rel_barrier": 0.7916666666666667,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.1,
+            0.12
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.1,
+          0.04,
+          0.005,
+          0.035,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.11499999999999999,
+          "rel_barrier": 0.9583333333333333,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.1,
+            0.12
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.1,
+          0.045,
+          0.045,
+          0.035,
+          0.12
+        ],
+        "barrier": {
+          "barrier": 0.08499999999999999,
+          "rel_barrier": 0.7083333333333333,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.1,
+            0.12
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed15_best vs zoo_seed7_best",
+    "endpoints": [
+      0.1,
+      0.105
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.1,
+          0.035,
+          0.06,
+          0.05,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.06999999999999999,
+          "rel_barrier": 0.6666666666666666,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.1,
+            0.105
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.1,
+          0.035,
+          0.06,
+          0.05,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.06999999999999999,
+          "rel_barrier": 0.6666666666666666,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.1,
+            0.105
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.1,
+          0.02,
+          0.005,
+          0.02,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.09999999999999999,
+          "rel_barrier": 0.9523809523809523,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.1,
+            0.105
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.1,
+          0.04,
+          0.005,
+          0.01,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.09999999999999999,
+          "rel_barrier": 0.9523809523809523,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.1,
+            0.105
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed15_best vs zoo_seed8_best",
+    "endpoints": [
+      0.1,
+      0.055
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.1,
+          0.04,
+          0.015,
+          0.035,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.085,
+          "rel_barrier": 0.85,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.1,
+            0.055
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.1,
+          0.04,
+          0.015,
+          0.035,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.085,
+          "rel_barrier": 0.85,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.1,
+            0.055
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.1,
+          0.04,
+          0.0,
+          0.02,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.1,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.1,
+            0.055
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.1,
+          0.01,
+          0.025,
+          0.055,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.09000000000000001,
+          "rel_barrier": 0.9,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.1,
+            0.055
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed15_best vs zoo_seed9_best",
+    "endpoints": [
+      0.1,
+      0.165
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.1,
+          0.03,
+          0.015,
+          0.055,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.15000000000000002,
+          "rel_barrier": 0.9090909090909092,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.1,
+            0.165
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.1,
+          0.03,
+          0.015,
+          0.055,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.15000000000000002,
+          "rel_barrier": 0.9090909090909092,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.1,
+            0.165
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.1,
+          0.015,
+          0.01,
+          0.04,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.155,
+          "rel_barrier": 0.9393939393939393,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.1,
+            0.165
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.1,
+          0.02,
+          0.015,
+          0.045,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.15000000000000002,
+          "rel_barrier": 0.9090909090909092,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.1,
+            0.165
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed16_best vs zoo_seed7_best",
+    "endpoints": [
+      0.12,
+      0.105
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.12,
+          0.055,
+          0.03,
+          0.08,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.75,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.105
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.12,
+          0.055,
+          0.03,
+          0.08,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.75,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.105
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.12,
+          0.035,
+          0.0,
+          0.02,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.12,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.105
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.12,
+          0.0,
+          0.0,
+          0.0,
+          0.105
+        ],
+        "barrier": {
+          "barrier": 0.12,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.12,
+            0.105
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed16_best vs zoo_seed8_best",
+    "endpoints": [
+      0.12,
+      0.055
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.12,
+          0.055,
+          0.04,
+          0.03,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.75,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.12,
+            0.055
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.12,
+          0.055,
+          0.04,
+          0.03,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.75,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.12,
+            0.055
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.12,
+          0.055,
+          0.015,
+          0.025,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.105,
+          "rel_barrier": 0.875,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.055
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.12,
+          0.055,
+          0.04,
+          0.03,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.75,
+          "argmax_lam": 0.75,
+          "endpoints": [
+            0.12,
+            0.055
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed16_best vs zoo_seed9_best",
+    "endpoints": [
+      0.12,
+      0.165
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.12,
+          0.025,
+          0.01,
+          0.05,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.155,
+          "rel_barrier": 0.9393939393939393,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.165
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.12,
+          0.025,
+          0.01,
+          0.05,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.155,
+          "rel_barrier": 0.9393939393939393,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.165
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.12,
+          0.025,
+          0.0,
+          0.03,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.165,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.165
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.12,
+          0.01,
+          0.0,
+          0.0,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.165,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.12,
+            0.165
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed7_best vs zoo_seed8_best",
+    "endpoints": [
+      0.105,
+      0.055
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.105,
+          0.045,
+          0.015,
+          0.065,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.8571428571428571,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.105,
+            0.055
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.105,
+          0.045,
+          0.015,
+          0.065,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.8571428571428571,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.105,
+            0.055
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.105,
+          0.015,
+          0.005,
+          0.055,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.09999999999999999,
+          "rel_barrier": 0.9523809523809523,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.105,
+            0.055
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.105,
+          0.045,
+          0.015,
+          0.08,
+          0.055
+        ],
+        "barrier": {
+          "barrier": 0.09,
+          "rel_barrier": 0.8571428571428571,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.105,
+            0.055
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed7_best vs zoo_seed9_best",
+    "endpoints": [
+      0.105,
+      0.165
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.105,
+          0.085,
+          0.03,
+          0.085,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.135,
+          "rel_barrier": 0.8181818181818182,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.105,
+            0.165
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.105,
+          0.085,
+          0.03,
+          0.085,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.135,
+          "rel_barrier": 0.8181818181818182,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.105,
+            0.165
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.105,
+          0.02,
+          0.0,
+          0.025,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.165,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.105,
+            0.165
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.105,
+          0.065,
+          0.045,
+          0.06,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.12000000000000001,
+          "rel_barrier": 0.7272727272727273,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.105,
+            0.165
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pair": "zoo_seed8_best vs zoo_seed9_best",
+    "endpoints": [
+      0.055,
+      0.165
+    ],
+    "arms": {
+      "full": {
+        "curve": [
+          0.055,
+          0.045,
+          0.05,
+          0.045,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.12000000000000001,
+          "rel_barrier": 0.7272727272727273,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.055,
+            0.165
+          ]
+        }
+      },
+      "conv_only": {
+        "curve": [
+          0.055,
+          0.045,
+          0.05,
+          0.045,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.12000000000000001,
+          "rel_barrier": 0.7272727272727273,
+          "argmax_lam": 0.25,
+          "endpoints": [
+            0.055,
+            0.165
+          ]
+        }
+      },
+      "value_only": {
+        "curve": [
+          0.055,
+          0.02,
+          0.0,
+          0.02,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.165,
+          "rel_barrier": 1.0,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.055,
+            0.165
+          ]
+        }
+      },
+      "single": {
+        "curve": [
+          0.055,
+          0.085,
+          0.04,
+          0.06,
+          0.165
+        ],
+        "barrier": {
+          "barrier": 0.125,
+          "rel_barrier": 0.7575757575757576,
+          "argmax_lam": 0.5,
+          "endpoints": [
+            0.055,
+            0.165
+          ]
+        }
+      }
+    }
+  }
+]
