@@ -119,20 +119,20 @@ from the endpoint weights alone.
 
 The short version of what came out:
 
-- **You can tell in advance which layers weight matching aligns reliably.**
+- You can tell in advance which layers weight matching aligns reliably.
   A layer's spectral gap and the assignment problem's best-versus-second-best
   margin rank the four axes correctly in 95% of pairs (permutation test
   p < 1e-4). The value head sits at margins of 1e-13, the numerical tie
   floor, where the matching is provably arbitrary; the dueling head's
   argmax-invariance means that arbitrariness is behaviourally inert, and
   aligning only the convolutions reproduces full alignment exactly.
-- **Identifiability and mergeability move in opposite directions.** The same
+- Identifiability and mergeability move in opposite directions. The same
   pipeline closes the barrier on wide MNIST MLPs and leaves it open here at
   every width, and sweeping MLP width shows why: the barrier closes exactly
   as the matching margins collapse. Wide networks merge because their unit
   correspondences stop being unique; these RL agents keep well-determined
   correspondences whose best permutation isn't enough.
-- **Single-run weight matching fails silently more often than not.** On
+- Single-run weight matching fails silently more often than not. On
   instances with a known exact solution, one coordinate-descent run recovers
   the true permutation 40% of the time; two restarts recover all of them,
   and five capture everything on real pairs. Every alignment number here
